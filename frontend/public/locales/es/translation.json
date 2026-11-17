@@ -1,0 +1,2824 @@
+{
+  "title": "Reach App — Plataforma de envíos masivos",
+  "name": "Reach",
+  "description": "Plataforma todo‑en‑uno para campañas masivas por SMS, WhatsApp y más",
+  "offline": {
+    "status": "Sin conexión",
+    "title": "Reach está offline",
+    "description": "Necesitas conexión a internet para usar Reach. Conéctate y vuelve a intentarlo.",
+    "retry": "Reintentar",
+    "checking": "Comprobando conexión...",
+    "checking_title": "Verificando conexión",
+    "checking_description": "Reach se mostrará cuando la conexión esté disponible.",
+    "checking_button": "Comprobando..."
+  },
+  "pwa": {
+    "update_available": "Hay una nueva versión de Reach disponible.",
+    "update": "Actualizar",
+    "loading": "Cargando Reach…",
+    "install_title": "Instala Reach",
+    "install_android_description": "Accede más rápido a Reach desde tu pantalla de inicio.",
+    "install_ios_description": "Abre Compartir y selecciona “Añadir a pantalla de inicio”.",
+    "install_button": "Instalar",
+    "install_dismiss": "Ahora no"
+  },
+  "sender_number": "Número de Remitente",
+  "template": "Plantilla",
+  "template_name": "Nombre de plantilla",
+  "created_at": "Creado el",
+  "updated_at": "Actualizado el",
+  "total_contacts": "{{count}} Contactos",
+  "valid_contacts": "{{count}} Validos",
+  "sent_count": "{{count}} Enviados",
+  "read_count": "{{count}} Leídos",
+  "delivered_count": "{{count}} Entregados",
+  "failed_count": "{{count}} Fallidos",
+  "organizations": "Organizaciones",
+  "date": {
+    "placeholder": "Selecciona una fecha"
+  },
+  "roles": {
+    "platform-admin": "Administrador de Plataforma",
+    "owner": "Propietario",
+    "admin": "Administrador",
+    "marketing": "Marketing",
+    "conversation": "Conversación",
+    "agent": "Agente",
+    "viewer": "Espectador"
+  },
+  "configuration": {
+    "title": "Configuración",
+    "description": "Gestiona tu cuenta, integraciones y configuración de la organización",
+    "account": "Cuenta",
+    "integrations": "Integraciones",
+    "coming_soon": "Próximamente",
+    "profile": {
+      "title": "Perfil",
+      "description": "Gestiona tu perfil",
+      "form": {
+        "full_name": "Nombre completo",
+        "full_name_placeholder": "Reach App",
+        "phone": "Teléfono",
+        "phone_placeholder": "+X XXX XXX XXXX"
+      },
+      "success": "Perfil actualizado correctamente",
+      "error": "No pudimos actualizar tu perfil",
+      "buttons": {
+        "save_changes": "Guardar cambios",
+        "saving": "Guardando...",
+        "change_password": "Cambiar contraseña"
+      }
+    },
+    "organization": {
+      "title": "Organización",
+      "create": "Crear Organización",
+      "create_description": "Crea una nueva organización para gestionar tu equipo y campañas",
+      "description": "Gestiona la configuración de tu organización",
+      "not_owner": "No tienes permiso para editar esta organización",
+      "success": "Organización actualizada correctamente",
+      "error": "Error al actualizar la organización",
+      "members": {
+        "title": "Equipo",
+        "description": "Gestiona a tu equipo y sus niveles de acceso.",
+        "table": {
+          "user": "Colaborador",
+          "roles": "Rol",
+          "status": "Estado",
+          "actions": "Acciones",
+          "email": "Correo electrónico",
+          "since": "Colaborador desde"
+        },
+        "invite_member": {
+          "title": "Invitar colaborador",
+          "description": "Invita a un nuevo colaborador a tu organización. Recibirá un correo para configurar su cuenta.",
+          "form": {
+            "email": "Correo electrónico",
+            "email_placeholder": "colaborador@reachapp.mx",
+            "role": "Rol",
+            "role_placeholder": "Selecciona un rol",
+            "send_invitation": "Enviar invitación"
+          },
+          "success": "Invitación enviada a {{email}} correctamente",
+          "error": "Error al enviar la invitación"
+        },
+        "edit_member": {
+          "title": "Detalles del colaborador",
+          "description_edit": "Ver y editar detalles, cambiar el rol o eliminar al colaborador de la organización.",
+          "description_non_edit": "Ver detalles del colaborador.",
+          "role_description": "Los roles determinan el nivel de acceso dentro de la organización. Elige el rol adecuado según sus responsabilidades.",
+          "edit": {
+            "success": "Colaborador actualizado correctamente",
+            "error": "Error al actualizar al colaborador"
+          },
+          "remove": {
+            "warning": "Esta acción no se puede deshacer.",
+            "confirm": "¿Eliminar colaborador?",
+            "description": "Esta acción eliminará al colaborador de la organización y revocará su acceso. No se puede deshacer.",
+            "button": "Eliminar colaborador",
+            "success": "Colaborador eliminado correctamente",
+            "error": "Error al eliminar colaborador"
+          },
+          "cancel_invite": {
+            "button": "Cancelar invitación",
+            "confirm": "¿Cancelar invitación?",
+            "description": "¿Estás seguro de que deseas cancelar la invitación para este usuario?"
+          },
+          "resend_button": "Reenviar invitación",
+          "resend_success": "Invitación reenviada con éxito",
+          "resend_error": "Error al reenviar la invitación"
+        },
+        "failed": {
+          "load_roles": "Error al cargar roles",
+          "load_members": "Error al cargar colaboradores",
+          "invite_member": "Error al invitar al colaborador",
+          "update_member": "Error al actualizar al colaborador",
+          "remove_member": "Error al eliminar al colaborador",
+          "at_least_one_owner": "Debe existir al menos un Propietario en la organización"
+        }
+      },
+      "routerIntegration": {
+        "title": "Integración con el router",
+        "description": "Registra las suscripciones de webhooks para que reach-router notifique a esta app los cambios de jobs y estado de agentes.",
+        "loading": "Verificando configuración del router…",
+        "load_error": "No se pudo cargar la configuración del router",
+        "routing_active": "El routing está activo para esta organización.",
+        "routing_inactive": "El routing está desactivado para esta organización.",
+        "status_configured": "Los webhooks del router están configurados para esta organización.",
+        "status_not_configured": "Los webhooks del router aún no están configurados.",
+        "toggle_label": "Activar routing",
+        "toggle_enable_success": "Routing activado correctamente",
+        "toggle_disable_success": "Routing desactivado",
+        "toggle_error": "Error al actualizar el routing",
+        "setup": "Configurar integración con el router",
+        "reconfigure": "Reconfigurar integración con el router",
+        "success": "Webhooks del router configurados correctamente",
+        "already_configured": "Los webhooks del router ya estaban configurados",
+        "error": "Error al configurar los webhooks del router",
+        "permission_required": "Necesitas el permiso router.manage para configurar la integración con el router."
+      }
+    },
+    "contact_fields": {
+      "title": "Campos de Contacto",
+      "description": "Define los parámetros disponibles para los contactos de esta organización.",
+      "create": "Agregar campo",
+      "edit": "Editar campo",
+      "delete": "Eliminar campo",
+      "confirm_delete": "¿Estás seguro de que deseas eliminar este campo?",
+      "info": "Los campos del sistema no pueden eliminarse. Los campos personalizados pueden modificarse o eliminarse en cualquier momento.",
+      "system_badge": "Sistema",
+      "custom_badge": "Custom",
+      "key_header": "Key (identificador)",
+      "name_header": "Nombre de visualización",
+      "type_header": "Tipo",
+      "required_header": "Requerido",
+      "origin_header": "Origen",
+      "delete_confirm_title": "¿Eliminar este campo de contacto?",
+      "delete_confirm_description": "Esta acción ocultará el campo del sistema. Si este campo está siendo utilizado en las reglas de alguna audiencia activa o segmento, podría afectar los criterios de filtrado. ¿Deseas continuar?",
+      "form": {
+        "new_field": "Nuevo campo",
+        "edit_field": "Editar campo",
+        "delete_field": "Eliminar campo",
+        "save_button": "Guardar campo",
+        "cancel_button": "Cancelar",
+        "system_badge": "Sistema",
+        "automatic_badge": "Automático",
+        "custom_badge": "Personalizado",
+        "immutable_badge": "Inmutable",
+        "description": "Configura los detalles del atributo para los contactos de tu organización.",
+        "required_fields": "Los campos requeridos son obligatorios.",
+        "success_update": "Campo actualizado correctamente",
+        "success_create": "Campo creado correctamente",
+        "success_delete": "Campo eliminado correctamente",
+        "error_duplicate_key": "La clave del campo ya existe",
+        "error_saving_field": "Error al guardar el campo",
+        "success_restored": "Se ha restaurado el campo previamente eliminado de forma exitosa.",
+        "name": {
+          "label": "Nombre del campo",
+          "placeholder": "Ej: Empresa, Cargo, Ciudad"
+        },
+        "key": {
+          "label": "Clave del campo",
+          "placeholder": "clave_del_campo",
+          "info": "Inmutable al guardar - Usado en consultas, integraciones y validaciones.",
+          "immutable_info": "Este identificador no puede cambiarse después de creado."
+        },
+        "type": {
+          "label": "Tipo de campo",
+          "placeholder": "Selecciona un tipo",
+          "text": "Texto",
+          "number": "Número",
+          "date": "Fecha",
+          "boolean": "Booleano"
+        },
+        "required": {
+          "label": "Campo requerido",
+          "description": "Los contactos deben completar este campo"
+        },
+        "preview": {
+          "label": "Vista previa en el panel de filtros",
+          "text": "Igual a, contiene...",
+          "number": "Mayor que, menor que...",
+          "date": "Antes de, después de...",
+          "boolean": "Es verdadero, es falso"
+        }
+      }
+    },
+    "api_keys": {
+      "title": "API Keys",
+      "description": "Gestiona las API Keys de tu organización",
+      "create": "Crear API Key",
+      "notifications": {
+        "create_success": "API Key creada correctamente",
+        "create_error": "Error al crear la API Key",
+        "limit_reached": "Has alcanzado el límite de API Keys de tu organización",
+        "revoke_success": "API Key revocada correctamente",
+        "revoke_error": "Error al revocar la API Key",
+        "delete_success": "API Key eliminada correctamente",
+        "delete_error": "Error al eliminar la API Key"
+      },
+      "alert": {
+        "title": "Seguridad de las API Keys",
+        "description": "Las claves se muestran una única vez. Existe un límite de {{count}} llaves activas, si lo alcanzas o pierdes una clave, deberás revocar y eliminar las anteriores.",
+        "limit_title": "Límite de API Keys alcanzado",
+        "limit_description": "Has llegado al máximo de {{count}} API Keys. Para generar una nueva, es necesario revocar y eliminar alguna de las llaves actuales."
+      },
+      "status": {
+        "active": "Activo",
+        "inactive": "Inactivo"
+      },
+      "table": {
+        "name": "Nombre",
+        "status": "Estado",
+        "prefix": "Prefijo",
+        "scopes": "Permisos",
+        "expires_at": "Expiración",
+        "created_at": "Fecha de creación",
+        "no_keys": "No se encontraron API Keys",
+        "fetch_error": "Error al consultar las API Keys, intente más tarde"
+      },
+      "dialog": {
+        "create": {
+          "title": "Nueva API Key",
+          "description": "Crea una nueva clave de acceso para la API de Reach. La clave se mostrará una única vez.",
+          "button": "Crear API Key"
+        },
+        "details": {
+          "title": "Detalles de API Key",
+          "description": "Información detallada de la clave de acceso.",
+          "dates_title": "Fechas",
+          "scopes_title": "Permisos",
+          "created_at_subtitle": "Creación",
+          "expired_at_subtitle": "Expiración",
+          "warning": "Esta acción no se puede deshacer.",
+          "revoke": "Revocar API Key",
+          "delete": "Eliminar API Key"
+        },
+        "revoke": {
+          "title": "¿Estás seguro de revocar esta API Key?",
+          "description": "Esta acción no se puede deshacer. Cualquier aplicación que use esta clave dejará de funcionar inmediatamente.",
+          "button": "Sí, revocar API Key"
+        },
+        "delete": {
+          "title": "¿Estás seguro de eliminar esta API Key?",
+          "description": "Esta acción eliminará permanentemente la clave de acceso. No se puede deshacer.",
+          "button": "Sí, eliminar API Key"
+        },
+        "created": {
+          "title": "API Key Creada",
+          "description": "Por favor, copie esta API key y guárdela en un lugar seguro. Por razones de seguridad, no podremos mostrársela de nuevo.",
+          "copy_warning": "Asegúrate de copiar tu API Key ahora. ¡No podrás volver a verla!",
+          "copy": "Copiar",
+          "copied": "¡Copiado!",
+          "close": "Cerrar"
+        }
+      },
+      "form": {
+        "name": {
+          "label": "Nombre de la clave",
+          "placeholder": "Nombre de la API Key",
+          "validation": {
+            "required": "El nombre es obligatorio",
+            "min": "El nombre debe tener al menos 3 caracteres",
+            "max": "El nombre no puede exceder los 100 caracteres"
+          }
+        },
+        "scopes": {
+          "validation": {
+            "required": "Debes seleccionar al menos un permiso"
+          }
+        },
+        "expired_at": {
+          "label": "Expiración",
+          "placeholder": "Selecciona una fecha de expiración",
+          "default": "Sin expiración",
+          "30_days": "30 días",
+          "90_days": "90 días",
+          "custom": "Fecha personalizada",
+          "hint": "Expirará el: {{date}}",
+          "validation": {
+            "invalid": "La fecha seleccionada no es válida"
+          }
+        }
+      },
+      "scopes": {
+        "title": "Permisos",
+        "description": "Selecciona los permisos para la API Key",
+        "campaigns": {
+          "title": "Campañas",
+          "read": {
+            "name": "Leer campañas",
+            "description": "Ver campañas y su estado"
+          },
+          "create": {
+            "name": "Crear campañas",
+            "description": "Crear nuevas campañas"
+          },
+          "update": {
+            "name": "Actualizar campañas",
+            "description": "Actualizar campañas existentes"
+          },
+          "execute": {
+            "name": "Ejecutar campañas",
+            "description": "Iniciar envío de campañas"
+          },
+          "delete": {
+            "name": "Eliminar campañas",
+            "description": "Eliminar campañas existentes"
+          },
+          "reports_view": {
+            "name": "Ver reportes de campañas",
+            "description": "Acceder a métricas y reportes de campañas"
+          }
+        },
+        "conversations": {
+          "title": "Conversaciones",
+          "read": {
+            "name": "Leer conversaciones",
+            "description": "Ver conversaciones y su historial"
+          },
+          "create": {
+            "name": "Crear conversaciones",
+            "description": "Iniciar nuevas conversaciones"
+          },
+          "update": {
+            "name": "Actualizar conversaciones",
+            "description": "Modificar conversaciones existentes"
+          },
+          "delete": {
+            "name": "Eliminar conversaciones",
+            "description": "Eliminar conversaciones existentes"
+          },
+          "reports_view": {
+            "name": "Ver reportes de conversaciones",
+            "description": "Acceder a métricas de conversaciones"
+          }
+        },
+        "contacts": {
+          "title": "Contactos",
+          "read": {
+            "name": "Leer contactos",
+            "description": "Ver la lista de contactos"
+          },
+          "create": {
+            "name": "Crear contactos",
+            "description": "Agregar nuevos contactos"
+          },
+          "update": {
+            "name": "Actualizar contactos",
+            "description": "Modificar contactos existentes"
+          },
+          "delete": {
+            "name": "Eliminar contactos",
+            "description": "Eliminar contactos existentes"
+          }
+        },
+        "organization": {
+          "title": "Organización",
+          "read": {
+            "name": "Leer organización",
+            "description": "Ver datos de la organización"
+          },
+          "update": {
+            "name": "Actualizar organización",
+            "description": "Modificar configuración de la organización"
+          },
+          "members_manage": {
+            "name": "Gestionar miembros",
+            "description": "Invitar, editar o eliminar miembros"
+          }
+        },
+        "twilio": {
+          "title": "Twilio",
+          "read": {
+            "name": "Leer configuración",
+            "description": "Ver credenciales e instancias de Twilio"
+          },
+          "manage": {
+            "name": "Gestionar Twilio",
+            "description": "Crear y modificar instancias de Twilio"
+          }
+        },
+        "agents": {
+          "title": "Agentes",
+          "read": {
+            "name": "Leer agentes",
+            "description": "Ver agentes y su estado"
+          },
+          "manage": {
+            "name": "Gestionar agentes",
+            "description": "Crear, editar o desactivar agentes"
+          }
+        },
+        "reporting": {
+          "title": "Reportes",
+          "all": {
+            "name": "Acceso completo a reportes",
+            "description": "Ver todos los reportes y analíticas"
+          }
+        }
+      }
+    }
+  },
+  "no_organization": {
+    "title": "Organización no encontrada",
+    "description": "Parece que aún no formas parte de ninguna organización.",
+    "help": "¿Necesitas ayuda? Por favor contacta soporte o a un administrador de tu organización anterior.",
+    "buttons": {
+      "create_organization": "Crear Organización"
+    },
+    "create": {
+      "title": "Crea tu organización",
+      "description": "Configura tu organización para comenzar con Reach.",
+      "success": "Organización creada correctamente",
+      "error": "Error al crear la organización"
+    }
+  },
+  "status": {
+    "draft": "Borrador",
+    "scheduled": "Programado",
+    "running": "En ejecución",
+    "paused": "Pausado",
+    "completed": "Completado",
+    "failed": "Fallido",
+    "pending": "Pendiente",
+    "delivered": "Entregado",
+    "sent": "Enviado",
+    "queued": "En cola",
+    "sending": "Enviando",
+    "undelivered": "No entregado",
+    "receiving": "Recibiendo",
+    "received": "Recibido",
+    "accepted": "Aceptado",
+    "read": "Leído",
+    "canceled": "Cancelado",
+    "responded": "Respondido",
+    "active": "Activo",
+    "inactive": "Inactivo",
+    "invited": "Invitado",
+    "expired": "Vencido",
+    "processed": "Procesado",
+    "pending_upload": "Subida pendiente",
+    "importing": "Importando",
+    "preparing": "Preparando"
+  },
+  "common": {
+    "all": "Todos",
+    "sync": "Sincronizar",
+    "loading": "Cargando...",
+    "success": "¡Éxito!",
+    "error": "Error",
+    "back": "Atrás",
+    "continue": "Continuar",
+    "close": "Cerrar",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "help": "Ayuda",
+    "edit": "Editar",
+    "auto": "Auto",
+    "ok": "OK",
+    "upload": "Subir",
+    "slug_label": "ID",
+    "slug_placeholder": "ej: tu-slug-de-organizacion",
+    "create": "Crear",
+    "creating": "Creando...",
+    "and": "Y",
+    "or": "O",
+    "load_more": "Cargar más",
+    "add": "Agregar",
+    "show_less": "Mostrar menos",
+    "show_more": "Mostrar más",
+    "refresh": "Actualizar",
+    "remove": "Eliminar",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "finish": "Finalizar",
+    "required": "Requerido",
+    "reset": "Reiniciar",
+    "yes": "Sí",
+    "no": "No",
+    "view": "Ver",
+    "delete": "Eliminar",
+    "deleting": "Eliminando...",
+    "updated": "Actualizado",
+    "unknown_error": "Ha ocurrido un error inesperado.",
+    "save": "Guardar",
+    "update": "Actualizar",
+    "saving": "Guardando...",
+    "search": "Buscar",
+    "select_placeholder": "Selecciona una opción…",
+    "no_results": "No se encontraron resultados",
+    "validation": {
+      "required": "Este campo es requerido",
+      "is_required": " es requerido"
+    },
+    "placeholder": {
+      "enter": "Ingresa {{field}}"
+    },
+    "completed": "Completada",
+    "resume": "Reanudar",
+    "now": "ahora mismo",
+    "mins_ago": "hace {{count}} minutos",
+    "hours_ago": "hace {{count}} horas",
+    "notice": "Aviso:",
+    "organization": "Organización",
+    "status": "Estado",
+    "role": "Rol",
+    "email": "Correo electrónico",
+    "channel": "Canal",
+    "users": "Usuarios",
+    "showing_range": "Mostrando {{from}}-{{to}} de {{total}}",
+    "error_feature_not_available": "Esta función no está disponible para tu organización: {{feature}}",
+    "pagination": "Paginación",
+    "page": "Página",
+    "previous_page": "Página anterior",
+    "next_page": "Página siguiente",
+    "search_placeholder": "Buscar...",
+    "country": "País",
+    "pagination_cursor": "Paginación por cursor",
+    "mode_switch": "Modo de visualización",
+    "quick_filters": "Filtros rápidos",
+    "wizard_progress": "Progreso del asistente",
+    "stats_metrics": "Estadísticas y métricas",
+    "done": "Completado"
+  },
+  "help": {
+    "documentation_not_available": "Documentación no disponible",
+    "panel_description": "Documentación de Reach con guías de configuración y solución de problemas",
+    "campaignWizard": "Ayuda del Asistente de Campañas",
+    "channelSms": "Ayuda del Canal SMS",
+    "channelWhatsapp": "Ayuda del Canal WhatsApp",
+    "variableMapping": "Ayuda de Mapeo de Variables",
+    "contentTemplates": "Ayuda de Contenido y Plantillas",
+    "twilioSetup": "Configuración de Integración Twilio"
+  },
+  "mode_toggle": {
+    "label": "Cambiar tema",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema"
+  },
+  "programming": {
+    "label": "Programación",
+    "type": "Tipo de ejecución",
+    "datetime": "Fecha y hora",
+    "timezone": "Zona horaria"
+  },
+  "auth": {
+    "access_denied": "No tienes permiso para acceder a esa sección.",
+    "hide": "Ocultar",
+    "show": "Ver",
+    "hide_password": "Ocultar contraseña",
+    "show_password": "Ver contraseña",
+    "password_placeholder": "Mínimo 12 caracteres",
+    "password_unrated": "Sin evaluar",
+    "password_weak": "Débil",
+    "password_medium": "Media",
+    "password_strong": "Fuerte",
+    "password_very_strong": "Muy fuerte",
+    "criteria_12_chars": "12 caracteres",
+    "criteria_uppercase": "mayúscula",
+    "criteria_lowercase": "minúscula",
+    "criteria_number": "número",
+    "criteria_symbol": "símbolo",
+    "password_no_spaces": "La contraseña no puede contener espacios",
+    "password_missing_singular": "Falta: ",
+    "password_missing_plural": "Faltan: ",
+    "password_all_rules_met": "Cumple toda la política",
+    "sign_in": {
+      "title": "Iniciar sesión",
+      "description": "Ingresa tu correo para acceder a tu cuenta",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "sign_in": "Iniciar sesión",
+      "forgot_password": "¿Olvidaste tu contraseña?",
+      "sign_up": "Regístrate",
+      "sign_up_description": "¿No tienes una cuenta?",
+      "contact_us": "Contáctanos",
+      "email_placeholder": "app@reach.com",
+      "password_placeholder": "········",
+      "success": "Inicio de sesión correcto",
+      "google": "Continuar con Google",
+      "google_error": "No pudimos iniciar sesión con Google",
+      "azure": "Continuar con Microsoft",
+      "azure_error": "No pudimos iniciar sesión con Microsoft",
+      "error": {
+        "message": "No pudimos iniciar sesión",
+        "email_not_verified": "Verifica tu correo para continuar.",
+        "no_user": "No se encontró ninguna cuenta con ese correo."
+      }
+    },
+    "sign_up": {
+      "title": "Crear cuenta",
+      "description": "Abre tu cuenta y desbloquea todas las funcionalidades",
+      "step1": {
+        "title": "Crea tu cuenta",
+        "description": "Ingresa tu correo y crea una contraseña para comenzar.",
+        "success": "Credenciales guardadas correctamente."
+      },
+      "step2": {
+        "title": "Cuéntanos sobre ti",
+        "description": "Necesitamos tu nombre y teléfono para configurar tu perfil.",
+        "success": "Datos personales guardados."
+      },
+      "step3": {
+        "title": "Configura tu equipo",
+        "description": "Define el nombre de tu organización y la URL única para tu equipo.",
+        "success": "¡Todo listo! Bienvenido a Reach."
+      },
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "confirm_password": "Confirmar contraseña",
+      "confirm_password_description": "Confirma tu contraseña",
+      "phone": "Teléfono",
+      "avatar_url": "URL del avatar",
+      "organization_name": "Nombre de la organización",
+      "organization_slug": "Identificador de la organización",
+      "slug": "Identificador",
+      "sign_up": "Crear cuenta",
+      "terms": "Aceptar términos y condiciones",
+      "sign_in": "Iniciar sesión",
+      "sign_in_description": "¿Ya tienes una cuenta?",
+      "name_placeholder": "App Reach",
+      "email_placeholder": "app@reach.com",
+      "password_placeholder": "········",
+      "confirm_password_placeholder": "········",
+      "phone_placeholder": "+X XXX XXX XXXX",
+      "avatar_url_placeholder": "https://avatar.com",
+      "organization_name_placeholder": "IZEI CG",
+      "organization_slug_placeholder": "https://izeicg.com",
+      "continue": "Continuar",
+      "success": "Cuenta creada",
+      "success_description": "Revisa tu bandeja y verifica tu correo para activar tu cuenta.",
+      "complete": "Registro completado con éxito",
+      "back_to_sign_in": "Volver a iniciar sesión",
+      "slug_already_exists": "Este identificador ya está en uso. Por favor, elige otro.",
+      "error": {
+        "message": "No pudimos crear tu cuenta",
+        "user_already_exists_use_another_email": "Ese correo ya está en uso. Prueba con otro.",
+        "invalid_credentials": "Credenciales inválidas",
+        "pending_invitation": "Ya existe una invitación asociada a este correo electrónico. Para completar tu registro, revisa tu correo y utiliza el enlace enviado para verificar tu cuenta y definir tu contraseña.",
+        "email_already_registered": "Este correo electrónico ya se encuentra registrado. Puedes iniciar sesión con tu cuenta o restablecer tu contraseña si no recuerdas tus credenciales.",
+        "go_to_login": "Iniciar sesión",
+        "reset_password": "Restablecer contraseña"
+      }
+    },
+    "logout": {
+      "success": "Sesión cerrada correctamente",
+      "error": "No pudimos cerrar sesión"
+    },
+    "forgot_password": {
+      "title": "Restablecer contraseña",
+      "description": "Ingresa tu correo y te enviaremos un enlace para restablecerla",
+      "email": "Correo electrónico",
+      "email_placeholder": "app@reach.com",
+      "submit": "Enviar enlace",
+      "back_to_sign_in": "Volver a iniciar sesión",
+      "success": "Revisa tu bandeja de entrada",
+      "success_description": "Si el correo existe, recibirás un enlace en minutos. Revisa bandeja de entrada y spam.",
+      "error": "No pudimos enviar el enlace"
+    },
+    "reset_password": {
+      "title": "Establecer nueva contraseña",
+      "description": "Ingresa tu nueva contraseña",
+      "new_password": "Nueva contraseña",
+      "confirm_password": "Confirmar contraseña",
+      "new_password_placeholder": "········",
+      "confirm_password_placeholder": "········",
+      "submit": "Restablecer contraseña",
+      "success": "Tu contraseña se actualizó",
+      "error": "No pudimos restablecer la contraseña",
+      "invalid_token": "El enlace de recuperación es inválido o ha expirado"
+    },
+    "change_password": {
+      "title": "Cambiar contraseña",
+      "description": "Ingresa tu contraseña actual y una nueva contraseña",
+      "current_password": "Contraseña actual",
+      "new_password": "Nueva contraseña",
+      "confirm_password": "Confirmar nueva contraseña",
+      "current_password_placeholder": "········",
+      "new_password_placeholder": "········",
+      "confirm_password_placeholder": "········",
+      "submit": "Cambiar contraseña",
+      "success": "Tu contraseña se actualizó correctamente",
+      "error": "No pudimos cambiar tu contraseña",
+      "saving": "Cambiando contraseña...",
+      "save": "Cambiar contraseña"
+    },
+    "invitation": {
+      "title": "¡Has sido invitado!",
+      "description": "Has sido invitado a unirte a",
+      "accept": "Aceptar Invitación",
+      "decline": "Declinar",
+      "accepting": "Aceptando...",
+      "error": "Invitación Inválida",
+      "not_found": "Invitación no encontrada",
+      "back_to_sign_in": "Volver al inicio de sesión",
+      "expired_title": "Invitación Expirada",
+      "expired_desc": "El enlace de invitación ha caducado. Por favor, solicita una nueva invitación al administrador de la organización.",
+      "invalid": "No pudimos validar tu invitación"
+    }
+  },
+  "agent": {
+    "menu": {
+      "activate": "Activar agente",
+      "active": "Agente activo"
+    },
+    "status": {
+      "available": "Disponible",
+      "unavailable": "No disponible",
+      "busy": "Ocupado",
+      "offline": "Fuera de línea",
+      "label": "Estado del Agente"
+    },
+    "session_not_ready": "Tu sesión no está lista. Intenta recargar la página.",
+    "already_active": "Ya tienes el modo Agente activado.",
+    "activating": "Activando perfil de Agente…",
+    "activate_error": "No se pudo activar el perfil de Agente",
+    "activated_success": "Perfil de Agente activado. Bienvenido al Inbox."
+  },
+  "validation": {
+    "error": "Revisa los datos ingresados",
+    "role": {
+      "required": "Selecciona un rol"
+    },
+    "email": {
+      "required": "Ingresa tu correo",
+      "invalid": "Ingresa un correo válido"
+    },
+    "password": {
+      "required": "Ingresa tu contraseña",
+      "min_length": "Usa al menos 12 caracteres",
+      "uppercase": "Incluye al menos una letra mayúscula",
+      "lowercase": "Incluye al menos una letra minúscula",
+      "number": "Incluye al menos un número",
+      "special_char": "Incluye al menos un carácter especial",
+      "no_whitespace": "La contraseña no debe contener espacios ni tabulaciones",
+      "must_contain": "Debe contener",
+      "different_from_current": "La nueva contraseña debe ser diferente a la actual",
+      "incorrect": "Contraseña incorrecta",
+      "level": {
+        "no_value": "Ingresa una contraseña",
+        "weak": "Contraseña débil",
+        "medium": "Contraseña media",
+        "strong": "Contraseña fuerte",
+        "very_strong": "Contraseña muy fuerte"
+      },
+      "requirements": {
+        "length": "Al menos 12 caracteres",
+        "uppercase": "Al menos una letra mayúscula",
+        "lowercase": "Al menos una letra minúscula",
+        "number": "Al menos un número",
+        "special_char": "Al menos un carácter especial",
+        "no_whitespace": "No espacios"
+      }
+    },
+    "name": {
+      "required": "Ingresa tu nombre",
+      "min_length": "Usa al menos 2 caracteres"
+    },
+    "confirm_password": {
+      "required": "Confirma tu contraseña",
+      "match": "Las contraseñas no coinciden"
+    },
+    "phone": {
+      "required": "El teléfono es obligatorio",
+      "min_length": "El teléfono debe tener al menos 12 caracteres",
+      "invalid": "El número de teléfono no es válido para el país seleccionado"
+    },
+    "organization_name": {
+      "required": "El nombre de la organización es obligatorio",
+      "min_length": "El nombre de la organización debe tener al menos 2 caracteres",
+      "no_symbols": "El nombre de la organización no puede contener símbolos",
+      "no_leading_trailing_spaces": "El nombre de la organización no puede iniciar o terminar con espacios"
+    },
+    "organization_slug": {
+      "required": "El slug de la organización es obligatorio",
+      "min_length": "El slug de la organización debe tener al menos 2 caracteres",
+      "no_symbols": "El slug de la organización no puede contener símbolos"
+    },
+    "twilio": {
+      "name": {
+        "required": "El nombre de la instancia es obligatorio",
+        "max": "El nombre de la instancia debe tener menos de 100 caracteres"
+      },
+      "account_sid": {
+        "required": "El Account SID es obligatorio",
+        "invalid": "El Account SID debe comenzar con AC seguido de 32 caracteres"
+      },
+      "api_key": {
+        "required": "El API Key es obligatorio"
+      },
+      "messaging_service_sid": {
+        "invalid": "El Messaging Service SID debe comenzar con MG seguido de 32 caracteres"
+      },
+      "phone_number": {
+        "invalid": "Por favor ingresa un número de teléfono válido en formato E.164"
+      },
+      "max_messages_per_second": {
+        "min": "Debe ser al menos 1 mensaje por segundo",
+        "max": "No puede exceder 100 mensajes por segundo"
+      }
+    }
+  },
+  "home": {
+    "welcome": "Bienvenido",
+    "greeting": "Bienvenido, {{name}}",
+    "subtitle": "¿Qué quieres hacer hoy?",
+    "session_info": "Información de sesión",
+    "user_name": "Nombre",
+    "user_email": "Correo electrónico",
+    "user_id": "ID de usuario",
+    "session_expires": "La sesión expira",
+    "logout": "Cerrar sesión",
+    "loading": "Cargando...",
+    "not_authenticated": "No autenticado",
+    "sections": {
+      "campaigns": "Campañas",
+      "conversations": "Conversaciones",
+      "contacts": "Contactos",
+      "configuration": "Configuración"
+    },
+    "actions": {
+      "new_campaign": "Nueva Campaña",
+      "new_campaign_desc": "Crea y envía una nueva campaña masiva.",
+      "analytics": "Analítica",
+      "analytics_desc": "Revisa el rendimiento de tus campañas anteriores.",
+      "templates": "Plantillas",
+      "templates_desc": "Gestiona tus plantillas de mensaje.",
+      "calendar": "Calendario",
+      "calendar_desc": "Consulta campañas programadas y próximas.",
+      "inbox": "Inbox",
+      "inbox_desc": "Gestiona conversaciones activas con tus contactos.",
+      "supervision": "Supervisión",
+      "supervision_desc": "Monitorea agentes y métricas de conversación.",
+      "conversation_analytics": "Analítica de Conversaciones",
+      "conversation_analytics_desc": "Revisa reportes y KPIs de conversaciones.",
+      "contacts": "Contactos",
+      "contacts_desc": "Visualiza y gestiona tu base de contactos.",
+      "lists": "Listas",
+      "lists_desc": "Organiza contactos en listas de envío.",
+      "segments": "Segmentos",
+      "segments_desc": "Crea grupos dinámicos con filtros.",
+      "settings": "Configuración",
+      "settings_desc": "Gestiona tu perfil, equipo e integraciones."
+    }
+  },
+  "analytics": {
+    "title": "Analítica",
+    "title_campaigns": "Analítica de Campañas",
+    "description": "Monitorea el rendimiento de tus comunicaciones en tiempo real",
+    "filter": "Filtros avanzados",
+    "title_last_campaigns": "Últimas 5 campañas",
+    "btn_all_campaigns": "Ver todas",
+    "campaigns": "Campañas",
+    "conversations": "Conversaciones",
+    "card": {
+      "created": "Creado: {{date}}",
+      "created_label": "Creado:",
+      "edited_label": "Editado:",
+      "today": "Hoy",
+      "yesterday": "Ayer",
+      "messages_processed": "Mensajes procesados",
+      "audience": "Audiencia",
+      "estimated": "Est.",
+      "delivery_status": "Estado de entrega",
+      "read_rate": "Tasa de lectura",
+      "high_performance": "Rendimiento alto",
+      "campaign_list": "Lista de Campañas",
+      "advanced_filters": "Filtros Avanzados",
+      "config_pending": "Configuración pendiente. Completa los pasos para enviar.",
+      "showing": "Mostrando {{from}} al {{to}} de {{total}} campañas"
+    },
+    "contacts": {
+      "title": "Contactos",
+      "id": "Id",
+      "status": "Estado",
+      "updated_at": "Actualizado el"
+    },
+    "chart": {
+      "delivered": "Entregados",
+      "sent": "Enviados",
+      "failed": "Fallidos",
+      "pending": "Pendientes",
+      "processed": "Procesados",
+      "total": "Total",
+      "trend_indicator": "Variación"
+    },
+    "kpis": {
+      "total_messages": "Total de mensajes",
+      "processed": "Procesados",
+      "sent": "Enviados",
+      "failed": "Fallidos",
+      "deliverability": "Entregabilidad",
+      "reading_rate": "Tasa de lectura",
+      "summary": "Resumen de rendimiento",
+      "empty": {
+        "title": "Error al cargar las métricas",
+        "description": "Intente más tarde para ver las métricas de rendimiento."
+      }
+    },
+    "selection": {
+      "count": "{{count}} campañas seleccionadas",
+      "view_grouped": "Ver Métricas Agrupadas",
+      "download_csv": "Descargar CSV",
+      "csv_summary": "Resumen (por campaña)",
+      "csv_detail": "Detalle (por contacto)",
+      "csv_limit_badge": "Límite excedido",
+      "csv_limit_tooltip": "La exportación detallada incluye {{total}} contactos (máx. {{max}}). Descarga el resumen por campaña.",
+      "save_group": "Guardar como Grupo",
+      "select_all_filtered": "Seleccionar todas las campañas filtradas",
+      "minimize": "Minimizar",
+      "selected": "seleccionadas",
+      "export_success": "Exportación exitosa",
+      "export_error": "Error en la exportación"
+    },
+    "grouped_mode": {
+      "banner": "Modo Agrupado: Viendo métricas combinadas de {{count}} campañas.",
+      "exit": "Salir del modo agrupado",
+      "campaigns_title": "Campañas en este grupo ({{count}})",
+      "show_more": "Ver {{count}} más",
+      "collapse": "Mostrar menos",
+      "edit_selection": "Editar selección"
+    },
+    "groups": {
+      "title": "Grupos Guardados",
+      "load": "Cargar grupo",
+      "empty": "Sin grupos guardados",
+      "delete": "Eliminar",
+      "count": "{{count}} grupos guardados",
+      "refresh": "Actualizar lista",
+      "update_group": "Actualizar grupo",
+      "delete_group": "Eliminar grupo",
+      "update_success": "Grupo actualizado exitosamente",
+      "update_error": "Error al actualizar el grupo",
+      "delete_success": "Grupo eliminado",
+      "delete_error": "Error al eliminar el grupo",
+      "save_success": "Grupo '{{name}}' guardado exitosamente",
+      "save_error": "Error al guardar el grupo",
+      "save_dialog_title": "Guardar Grupo de Campañas",
+      "save_dialog_description": "Ingresa un nombre para este grupo de {{count}} campañas.",
+      "name_label": "Nombre del grupo",
+      "name_placeholder": "ej: Campañas Q1",
+      "cancel": "Cancelar",
+      "save": "Guardar"
+    }
+  },
+  "sidebar": {
+    "title": "Barra lateral",
+    "description": "Muestra la barra lateral móvil.",
+    "toggle": "Alternar barra lateral",
+    "navigation": "Navegación principal",
+    "breadcrumb": "Ruta de navegación",
+    "quick_access": "Accesos rápidos",
+    "menu": "Menú"
+  },
+  "user_menu": {
+    "account": "Cuenta",
+    "billing": "Facturación",
+    "notifications": "Notificaciones",
+    "logout": "Cerrar sesión"
+  },
+  "site_header": {
+    "home": "Inicio",
+    "campaigns": "Campañas",
+    "calendar": "Calendario",
+    "conversations": "Conversaciones",
+    "contacts": {
+      "title": "Contactos",
+      "lists": "Listas",
+      "segments": "Segmentos"
+    },
+    "inbox": "Inbox",
+    "supervision": "Supervisión",
+    "analytics": {
+      "label": "Analítica",
+      "campaigns": "Campañas",
+      "conversations": "Conversaciones"
+    },
+    "settings": "Configuración",
+    "twilio": "Twilio",
+    "templates": "Plantillas"
+  },
+  "calendar": {
+    "title": "Calendario de Campañas",
+    "prev_month": "Mes anterior",
+    "next_month": "Mes siguiente",
+    "today": "Hoy",
+    "refresh": "Actualizar",
+    "more_count": "+{{count}} más",
+    "view": {
+      "month": "Mes",
+      "week": "Semana",
+      "week_coming_soon": "Vista semanal próximamente"
+    },
+    "days_short": {
+      "mon": "Lun",
+      "tue": "Mar",
+      "wed": "Mié",
+      "thu": "Jue",
+      "fri": "Vie",
+      "sat": "Sáb",
+      "sun": "Dom"
+    },
+    "drafts_panel": {
+      "title": "Borradores",
+      "helper": "Arrastra al calendario para programar",
+      "empty": "No hay borradores sin fecha"
+    },
+    "schedule_dialog": {
+      "title": "Programar campaña",
+      "time_label": "Hora de envío",
+      "cancel": "Cancelar",
+      "confirm": "Programar",
+      "time_too_early": "La hora debe ser al menos 5 minutos en el futuro"
+    },
+    "toasts": {
+      "moved_to_drafts": "\"{{name}}\" movida a borradores",
+      "rescheduled": "\"{{name}}\" movida al {{date}}",
+      "scheduled": "\"{{name}}\" programada",
+      "update_error": "No se pudo actualizar la campaña",
+      "fetch_error": "No se pudieron cargar las campañas",
+      "past_date_error": "No se puede agendar una campaña en una fecha pasada"
+    }
+  },
+  "twilio": {
+    "card": {
+      "title": "Cuenta de Twilio",
+      "description": "Configura tus credenciales de Twilio para habilitar campañas de mensajería."
+    },
+    "fields": {
+      "name": "Nombre de la instancia",
+      "name_placeholder": "Producción",
+      "account_sid": "Account SID",
+      "api_key": "API Key / Auth Token",
+      "messaging_service_sid": "Messaging Service SID (Opcional)",
+      "phone_number": "Número de teléfono (Opcional)"
+    },
+    "actions": {
+      "save": "Guardar cambios",
+      "test_connection": "Probar conexión",
+      "learn_more": "Más información"
+    },
+    "create_success": "Instancia de Twilio creada correctamente",
+    "update_success": "Instancia de Twilio actualizada correctamente",
+    "save_error": "Error al guardar la instancia de Twilio",
+    "connection_success": "¡Conexión exitosa!",
+    "connection_failed": "Conexión fallida",
+    "connection_error": "Error experimental la conexión",
+    "credentials_required": "Por favor ingresa Account SID y API Key primero",
+    "configuration_required": "Configuración de Twilio Requerida",
+    "no_instance_warning": "Necesitas configurar una instancia de Twilio para comenzar a enviar campañas.",
+    "configure_now": "Configurar Twilio",
+    "template_preview": {
+      "aria_label": "Previsualización de plantilla de Twilio",
+      "empty": "No hay contenido para previsualizar",
+      "incomplete_fields": "Campos incompletos:",
+      "button_preview": "Vista previa de botón",
+      "media_alt": "Media del encabezado",
+      "document_attachment": "Documento adjunto",
+      "not_available": "Preview no disponible",
+      "select_prompt": "Selecciona una plantilla para previsualizar su contenido.",
+      "status": {
+        "approved": "Aprobada",
+        "rejected": "Rechazada",
+        "pending": "Pendiente",
+        "paused": "Pausada",
+        "unsubmitted": "Sin enviar",
+        "received": "Recibido"
+      },
+      "category": {
+        "marketing": "Marketing",
+        "utility": "Utilidad",
+        "authentication": "Autenticación"
+      },
+      "placeholders": {
+        "header": "Escribe un encabezado",
+        "body": "Escribe tu texto aquí...",
+        "footer": "Escribe un pie de página",
+        "button": "Escribe texto del botón",
+        "media": "Placeholder de imagen",
+        "default": "Contenido en construcción"
+      },
+      "fields": {
+        "header": "Encabezado",
+        "body": "Cuerpo",
+        "footer": "Pie de página"
+      }
+    },
+    "content_types": {
+      "card": "Tarjeta",
+      "text": "Texto",
+      "media": "Multimedia",
+      "quick_reply": "Respuesta rápida",
+      "quick-reply": "Respuesta rápida",
+      "list_picker": "Lista",
+      "list-picker": "Lista",
+      "call_to_action": "Acciones",
+      "call-to-action": "Acciones",
+      "list": "Lista",
+      "product": "Producto",
+      "product_list": "Lista de productos",
+      "product-list": "Lista de productos",
+      "location": "Ubicación",
+      "catalog": "Catálogo",
+      "flows": "Flujo",
+      "location_request": "Solicitud de ubicación",
+      "location-request": "Solicitud de ubicación",
+      "authentication": "Autenticación (OTP)",
+      "carousel": "Carrusel / Tarjetas",
+      "unknown": "Tipo desconocido"
+    }
+  },
+  "campaign": {
+    "empty": {
+      "title": "Aún no hay campañas",
+      "description": "Aún no has creado ninguna campaña. Empieza creando tu primera campaña.",
+      "button": "Crear campaña",
+      "not_found": {
+        "title": "Campaña no encontrada",
+        "description": "La campaña que busca no existe.",
+        "button": "Volver a Campañas"
+      }
+    },
+    "card": {
+      "title": "Campañas",
+      "description": "Configura tu campaña para enviar a tus contactos.",
+      "next": "Siguiente",
+      "prev": "Anterior",
+      "reset": "Reiniciar",
+      "name": "Nombre",
+      "warning_audience": "Por favor, selecciona una lista o segmento con contactos para continuar"
+    },
+    "badge": {
+      "sms_free_text": "Texto libre"
+    },
+    "message": {
+      "content": {
+        "title": "Contenido del mensaje"
+      }
+    },
+    "upload": {
+      "title": "Subir Campaña",
+      "description": "Sube un archivo CSV con tus contactos de campaña",
+      "drag_drop": "Arrastra y suelta o",
+      "drop_here": "Suelta el archivo aquí",
+      "choose_file": "elige un archivo CSV",
+      "to_upload": "para subir",
+      "learn_more": "Más información",
+      "error_parsing": "Error al analizar CSV",
+      "limit_exceeded_title": "Límite de Registros Excedido",
+      "max_records_error": "El archivo CSV excede el límite máximo de {{max}} registros",
+      "accepted_file_types": "Tipos de archivo aceptados: {{types}}",
+      "upload_failed": "Error al subir el archivo CSV",
+      "upload_valid_file_error": "Por favor, sube un tipo de archivo válido. Aceptados: {{extensions}}",
+      "file_exceeds_limit_error": "El tamaño del archivo excede el límite de {{max}}MB",
+      "invalid_file": "Archivo inválido",
+      "max_size": "Tamaño máx.: {{size}}MB",
+      "missing_headers_error": "El archivo CSV no debe contener encabezados vacíos.",
+      "large_file_notice": "El archivo es grande. Solo se validarán las primeras 20,000 filas."
+    },
+    "mapping": {
+      "title": "Mapear Columnas",
+      "phone_column": "Columna de Número de Teléfono",
+      "name_column": "Columna de Nombre",
+      "select_column": "Seleccionar Columna",
+      "csv_header": "Encabezado CSV",
+      "sample_data": "Datos de Muestra (Fila 1)",
+      "status": "Estado",
+      "mapped_to_phone": "Mapeado a Teléfono",
+      "mapped_to_name": "Mapeado a Nombre",
+      "custom_field": "Campo Personalizado",
+      "validation_errors": "Errores de Validación",
+      "validation_errors_count": "Errores de Validación ({{count}})",
+      "all_valid": "Todos los contactos son válidos",
+      "validation_summary": "Resumen de validación",
+      "valid_contacts": "{{count}} contactos válidos (se enviarán)",
+      "invalid_contacts": "{{count}} contactos inválidos (se omitirán)",
+      "validation_warning": "Se encontraron errores en algunos contactos",
+      "validation_warning_desc": "Los contactos con errores serán omitidos. Puedes continuar con los contactos válidos.",
+      "contacts_ready": "{{count}} contactos listos para enviar",
+      "warning_deduplication": "Aviso sobre duplicados",
+      "warning_deduplication_desc": "Ten en cuenta que no se han validado contactos duplicados en esta etapa. La deduplicación se realizará automáticamente al ejecutar la campaña, asegurando que cada contacto único reciba solo un mensaje.",
+      "row_error": "Fila {{row}}: {{message}}",
+      "and_more": "...y {{count}} más",
+      "phone_required": "El número de teléfono es obligatorio",
+      "phone_invalid_title": "Número de teléfono inválido",
+      "phone_column_invalid": "El dato en la columna seleccionada no parece ser un teléfono válido (ejemplo: +521234567890). Por favor, verifica tu selección.",
+      "import_notice_title": "Formato de números de teléfono",
+      "e164_requirement_desc": "Para asegurar la entrega de tus mensajes, los números de teléfono deben cumplir con el formato internacional E.164.",
+      "e164_example": "Debe incluir el símbolo + seguido del código de país y el número sin espacios.",
+      "invalid_numbers_skip_notice": "Los números que no cumplan con este formato o que estén duplicados en el archivo serán omitidos automáticamente."
+    },
+    "configuration": {
+      "campaign_name": "Nombre de la Campaña",
+      "campaign_name_placeholder": "ej., Venta de Verano 2025",
+      "channel": "Canal",
+      "channel_info_about": "Acerca de {{channel}}",
+      "sms": "SMS",
+      "sms_description": "Envía mensajes de SMS a tus contactos.",
+      "rcs": "RCS",
+      "rcs_description": "Envía mensajes de RCS a tus contactos.",
+      "about_sms": "Acerca de SMS",
+      "details_sms": "Detalles sobre SMS",
+      "whatsapp": "WhatsApp",
+      "whatsapp_description": "Envía mensajes de WhatsApp a tus contactos.",
+      "about_whatsapp": "Acerca de WhatsApp",
+      "details_whatsapp": "Detalles sobre WhatsApp",
+      "template": "Plantilla",
+      "templates_about": "Acerca de Plantillas",
+      "about_template": "Acerca de Plantilla",
+      "details_template": "Detalles sobre Plantilla",
+      "about_message": "Acerca de Mensaje Personalizado",
+      "details_message": "Detalles sobre Mensaje Personalizado",
+      "select_template": "Seleccionar plantilla",
+      "sender": "Remitente",
+      "select_sender": "Seleccionar Remitente",
+      "search_template": "Buscar Plantilla",
+      "no_templates_found": "No se ha encontrado ninguna plantilla",
+      "search_sender": "Buscar Remitente",
+      "no_senders_found": "No se ha encontrado ningún remitente",
+      "has_flow": "Tiene Flujo de Studio",
+      "flow": "Flujo de Studio",
+      "select_flow": "Seleccionar Flujo de Studio",
+      "flow_required": "Flujo de Studio es obligatorio",
+      "use_template": "Usar plantilla",
+      "message": "Mensaje personalizado",
+      "message_placeholder": "ej., Hola desde Reach.",
+      "list": "Lista",
+      "segment": "Segmento",
+      "segments": "Segmentos",
+      "contacts": "Contactos",
+      "valid_contacts": "Contactos Válidos",
+      "total_contacts": "Total de Contactos",
+      "length": "Longitud",
+      "variable_mapping": "Mapeo de Variables",
+      "variable_mapping_description": "Mapea las variables de tu plantilla o mensaje con las columnas de tu archivo CSV",
+      "variable_mapping_about": "Acerca de Mapeo",
+      "select_csv_column": "Seleccionar columna del CSV",
+      "select_contact_field": "Seleccionar campo de contacto",
+      "sample_value": "Valor de ejemplo",
+      "default": "Por defecto",
+      "required": "Requerido",
+      "optional": "Opcional",
+      "no_value": "Sin valor",
+      "unmapped_variables_warning": "Hay variables requeridas sin mapear. Por favor, mapea todas las variables para continuar.",
+      "template_pending_forced_draft": "La plantilla está pendiente de aprobación. Se ha forzado el estado a 'Manual'.",
+      "refresh": {
+        "sms": {
+          "error_loading_senders": "Error al cargar remitentes SMS",
+          "error_loading_templates": "Error al cargar plantillas SMS"
+        },
+        "whatsapp": {
+          "error_loading_senders": "Error al cargar remitentes de WhatsApp",
+          "error_loading_templates": "Error al cargar plantillas de WhatsApp"
+        },
+        "rcs": {
+          "error_loading_senders": "Error al cargar remitentes de RCS",
+          "error_loading_templates": "Error al cargar plantillas de RCS"
+        }
+      },
+      "schedule": {
+        "configuration_title": "Configuración de envio",
+        "section_title": "Estado y Programación",
+        "manual_label": "Manual",
+        "manual_help": "La campaña se guardará en tu lista de borradores.",
+        "scheduled_label": "Programar envío",
+        "scheduled_help": "Define una fecha y hora específica para el lanzamiento.",
+        "date_label": "Fecha",
+        "time_label": "Hora",
+        "date_placeholder": "Seleccionar fecha",
+        "timezone_label": "Zona horaria: ({{gmt}}) {{tz}}.",
+        "utc_preview_label": "Payload (UTC):",
+        "utc_preview_empty": "—",
+        "disabled_pending_template": "La plantilla está pendiente de aprobación."
+      }
+    },
+    "execution": {
+      "title": "Rendimiento de Envío",
+      "started_at": "Fecha de inicio",
+      "completed_at": "Fecha de finalización",
+      "last_paused_at": "Última pausa",
+      "current_duration": "Tiempo transcurrido",
+      "duration": "Tiempo total de envío",
+      "speed": "Velocidad de envío",
+      "msg_per_min": "msjs/min"
+    },
+    "review": {
+      "name": "Nombre",
+      "contacts": "{{count}} contactos",
+      "contacts_ready": "Contactos listos para enviar",
+      "row_count_title": "Contactos detectados",
+      "row_count_counting": "Contando contactos...",
+      "row_count_exact": "El CSV contiene {{contacts}} contactos.",
+      "row_count_partial": "Se detectaron más de {{contacts}} contactos (lectura en progreso).",
+      "template": "Plantilla",
+      "sender": "Remitente",
+      "sid": "SID",
+      "body": "Cuerpo",
+      "no_body": "Sin cuerpo",
+      "variables": "Variables (por defecto)",
+      "phone_number": "Número de Teléfono",
+      "capabilities": "Capacidades",
+      "approval_requests": "Solicitudes de Aprobación",
+      "status": "Estado",
+      "category": "Categoría",
+      "rejection_reason": "Razón de Rechazo",
+      "description": "Descripción",
+      "create": "Crear Campaña",
+      "flow": "Flujo de Studio",
+      "updated": "Fecha de Actualización",
+      "created": "Fecha de Creación",
+      "mapped_variables": "Variables Mapeadas",
+      "mapped_variables_description": "Variables mapeadas son las variables que se utilizarán en la plantilla.",
+      "no_variables": "No hay variables para mapear",
+      "mapped": "Mapeada",
+      "not_mapped": "No mapeada",
+      "template_preview": "Vista Previa de Plantilla",
+      "rules": "Reglas",
+      "countries": "Países"
+    },
+    "delete": {
+      "button": "Eliminar",
+      "success": "Campaña eliminada exitosamente",
+      "error": "Fallo al eliminar la campaña"
+    },
+    "launch": {
+      "button": "Ejecutar",
+      "success": "Campaña ejecutada exitosamente",
+      "error": "Fallo al ejecutar la campaña",
+      "disabled_pending_template": "La plantilla está pendiente de aprobación.",
+      "disabled_offline_sender": "El remitente está fuera de línea.",
+      "confirm_force_scheduled": {
+        "title": "Confirmar Ejecución Inmediata",
+        "message": "Esta campaña está programada. ¿Deseas ejecutarla inmediatamente?",
+        "cancel": "Cancelar",
+        "confirm": "Ejecutar Ahora"
+      }
+    },
+    "update": {
+      "button": "Actualizar",
+      "success": "Campaña actualizada exitosamente",
+      "error": "Fallo al actualizar la campaña"
+    },
+    "clone": {
+      "button": "Duplicar",
+      "success": "Campaña duplicada exitosamente",
+      "error": "Fallo al duplicar la campaña"
+    },
+    "report": {
+      "button": "Descargar Reporte",
+      "success": "Reporte descargado exitosamente",
+      "error": "Fallo al descargar el reporte"
+    },
+    "export_modal": {
+      "title": "Exportar Resultados",
+      "description": "Selecciona los campos que deseas incluir en el reporte.",
+      "fields_active": "Campos activos de la instancia",
+      "fields_historical": "Inactivo actualmente — disponible en el snapshot",
+      "standard_fields": "Campos estándar",
+      "metadata_fields": "Metadatos de envío",
+      "snapshot_variables": "Variables de la campaña (Snapshot)",
+      "info_title": "Información importante sobre el snapshot",
+      "info_description": "Los campos personalizados listados aquí provienen directamente del snapshot de la campaña: son los valores que tenía cada contacto en el momento exacto en que se ejecutó. Por esto, podrían aparecer campos que ya fueron eliminados de la plataforma, y los valores pueden ser diferentes a los actuales del contacto.",
+      "cancel": "Cancelar",
+      "export": "Exportar CSV"
+    },
+    "pause": {
+      "button": "Pausar",
+      "success": "Campaña pausada exitosamente",
+      "error": "Fallo al pausar la campaña",
+      "protection_triggered_title": "Pausa Preventiva Activada",
+      "dialog": {
+        "title": "¿Pausar campaña?",
+        "description": "Los mensajes que ya están en proceso de envío terminarán de salir en los próximos segundos. La campaña se detendrá completamente a continuación y podrás reanudarla más tarde sin enviar duplicados."
+      }
+    },
+    "resume": {
+      "button": "Reanudar",
+      "success": "Campaña reanudada exitosamente",
+      "error": "Fallo al reanudar la campaña"
+    },
+    "details": {
+      "title": "Detalles de Campaña"
+    },
+    "download": {
+      "button": "Descargar ..."
+    },
+    "edit": {
+      "button": "Editar",
+      "title": "Editar Campaña",
+      "success": "Campaña actualizada exitosamente",
+      "error": "Fallo al actualizar la campaña",
+      "save_changes": "Guardar Cambios",
+      "discard": "Descartar",
+      "restore": "Restablecer",
+      "cancel": "Cancelar",
+      "cannot_edit": "No se puede editar una campaña en ejecución o finalizada",
+      "load_error": "Error al cargar la campaña",
+      "unsaved_changes": "Tienes cambios sin guardar. ¿Deseas descartarlos?"
+    },
+    "create": {
+      "success": "Campaña creada exitosamente",
+      "error": "Fallo al crear la campaña",
+      "error_unique": "Ya existe una campaña con ese nombre en tu organización",
+      "success_unique": "Nombre de campaña disponible",
+      "loading": "Verificando nombre de campaña...",
+      "empty_name": "El nombre de la campaña no puede estar vacío",
+      "error_schedule": "La fecha programada debe ser al menos {{minutes}} minutos en el futuro"
+    },
+    "contacts_page": {
+      "title": "Contacto",
+      "total": "en total",
+      "no_data": "No hay contactos disponibles",
+      "error_loading": "Error al cargar contactos",
+      "of": "de",
+      "no_name": "Sin nombre",
+      "info": "Info",
+      "error_code": "Error {{code}}",
+      "empty_draft_title": "Campaña en borrador",
+      "empty_draft_desc": "Los contactos se cargarán al ejecutar la campaña (~{{count}} contactos estimados).",
+      "empty_scheduled_title": "Campaña programada",
+      "empty_scheduled_desc": "Los contactos se cargarán ~5 minutos antes de la hora programada: {{date}}.",
+      "empty_preparing_title": "Procesando contactos",
+      "empty_preparing_desc": "Importando contactos, esto puede tardar unos minutos.",
+      "empty_generic_title": "Sin contactos",
+      "empty_generic_desc": "No hay contactos disponibles en este momento.",
+      "alert_title": "Estado de los contactos",
+      "alert_draft_desc": "Los contactos aún no se han cargado. Se cargarán cuando ejecutes la campaña.",
+      "alert_scheduled_desc": "Los contactos se cargarán ~5 minutos antes de la hora programada.",
+      "alert_importing_desc": "Los contactos se están importando. Por favor espera unos minutos."
+    },
+    "filters": {
+      "title": "Filtros Avanzados",
+      "subtitle": "Refina los resultados de analíticas con precisión.",
+      "channels": "Canales",
+      "campaign_status": "Estado de Campaña",
+      "sender": "Remitente",
+      "search_sender": "Buscar ID de remitente o número de teléfono..",
+      "date_range": "Rango de Fechas",
+      "start_date": "Fecha Inicio",
+      "end_date": "Fecha Fin",
+      "clear": "Limpiar filtros",
+      "cancel": "Cancelar",
+      "apply": "Aplicar filtros",
+      "search_name": "Buscar por nombre de campaña",
+      "placeholder_name": "Nombre de campaña",
+      "filter_by_date_type": "Tipo de fecha",
+      "date_type": {
+        "created": "Fecha de creación",
+        "edited": "Fecha de edición",
+        "scheduled": "Fecha de programación",
+        "executed": "Fecha de ejecución",
+        "completed": "Fecha de finalización"
+      }
+    },
+    "test": {
+      "success": "Prueba exitosa",
+      "sending": "Enviando",
+      "error": "Error en la prueba",
+      "error_no_phones": "No se encontraron números de teléfono para la prueba",
+      "error_too_short": "El número de teléfono es demasiado corto",
+      "error_invalid_prefix": "El número de teléfono debe incluir el prefijo de país (ej: +52...)",
+      "error_invalid_format": "El número de teléfono debe ser un formato válido (ej: +521234567890)",
+      "modal_title": "Mensaje de Prueba",
+      "phones_label": "Números de teléfono",
+      "data_label": "Datos",
+      "send_button": "Enviar",
+      "action_button": "Enviar mensaje de prueba",
+      "status_title": "Estatus de Envío"
+    },
+    "errors": {
+      "panel_title": "Análisis de Errores",
+      "panel_description": "Desglose detallado de fallas para la campaña:",
+      "total_failed": "Total de Fallas",
+      "different_types": "Tipos de Error",
+      "no_errors_found": "No se encontraron códigos de error registrados.",
+      "load_error": "No se pudo cargar el análisis de errores.",
+      "code_label": "Código {{code}}",
+      "view_breakdown": "Ver desglose de {{count}} fallos"
+    },
+    "valid": "Válida",
+    "invalid": "Inválida",
+    "archived_badge": "Archivada",
+    "archived_disabled_reason": "Esta campaña está archivada",
+    "archived_alert_title": "Campaña Archivada",
+    "archived_alert_desc": "Los miembros de esta campaña fueron retirados del almacenamiento activo. La consulta y descarga de datos opera sobre el archivo histórico.",
+    "archived_table_title": "Tabla de contactos archivada",
+    "archived_table_desc": "Los miembros activos de esta campaña han sido archivados. Puedes descargar el reporte histórico directamente.",
+    "download_archived_csv": "Descargar Histórico CSV"
+  },
+  "chat": {
+    "time": {
+      "now": "Ahora",
+      "minutes": "{{value}} minutos",
+      "hours": "{{value}} horas",
+      "yesterday": "Ayer",
+      "days": "{{value}} días"
+    },
+    "new_chat": {
+      "title": "Nueva Conversación",
+      "description": "Inicia una nueva conversación en WhatsApp.",
+      "start_chat": "Iniciar Conversación"
+    },
+    "errors": {
+      "no_instance": "No hay instancia activa.",
+      "invalid_sender": "Número remitente inválido.",
+      "conversation_failed": "No se pudo crear la conversación.",
+      "mapped_variable_empty": "Una variable mapeada no tiene valor en el contacto seleccionado."
+    },
+    "preview": {
+      "title": "Vista Previa",
+      "outbound_message": "Vista Previa de Salida",
+      "empty_state": "Selecciona una plantilla para visualizar cómo se verá el mensaje para el cliente."
+    },
+    "warnings": {
+      "already_assigned": "Este cliente ya está siendo atendido por otro agente."
+    },
+    "success": {
+      "message_sent": "Mensaje enviado correctamente."
+    }
+  },
+  "errors": {
+    "no_organization": "No se encontró la organización"
+  },
+  "toast": {
+    "success": {
+      "email_verified": "Tu correo fue verificado"
+    },
+    "default_message": "Bienvenido a Reach"
+  },
+  "inbox": {
+    "title": "Chats",
+    "about": "Acerca de Chats Inbox",
+    "search": {
+      "placeholder": "Buscar conversación...",
+      "no_results": "No hay coincidencias",
+      "no_results_description": "Intenta con otro nombre o número",
+      "clean_search": "Limpiar búsqueda"
+    },
+    "new_chat": {
+      "variables": "Variables de la plantilla",
+      "search_contact_placeholder": "Buscar contacto por nombre o teléfono...",
+      "search_contact": "Buscar contacto",
+      "no_contacts_found": "No se encontraron contactos.",
+      "mode_contact": "Contacto",
+      "mode_manual": "Número manual",
+      "map_to_field": "Mapear a campo",
+      "custom_value": "Valor personalizado",
+      "resolved_value": "Valor resuelto",
+      "empty_in_contact": "Vacío en el contacto",
+      "no_value_in_contact": "Sin valor en el contacto",
+      "blocked_variables_warning": "Hay variables mapeadas sin valor en el contacto. Corrígelas para continuar."
+    },
+    "close_dialog": {
+      "title": "¿Finalizar conversación?",
+      "description": "Esta acción cerrará la conversación y no podrás responder.",
+      "cancel": "Cancelar",
+      "confirm": "Finalizar",
+      "loading": "Finalizando..."
+    },
+    "empty": {
+      "conversations": {
+        "title": "Sin conversaciones entrantes",
+        "description": "No se han recibido mensajes en este momento."
+      }
+    },
+    "menu": {
+      "conversations": {
+        "view_details": "Ver detalles"
+      },
+      "close_conversation": "Finalizar conversación"
+    },
+    "toast": {
+      "close_success": "Conversación archivada correctamente",
+      "close_error": "Error al cerrar la conversación"
+    },
+    "coming_soon": {
+      "title": "Próximamente",
+      "description": "Estamos trabajando en esta funcionalidad.",
+      "back_to_campaigns": "Volver a Campañas"
+    },
+    "message": {
+      "placeholder": "Escribe un mensaje"
+    },
+    "send": {
+      "message": "Enviar"
+    },
+    "select": {
+      "title": "Selecciona una conversación",
+      "description": "Elige un chat de la lista para empezar a mensajear."
+    },
+    "attachment": {
+      "image": "Imagen",
+      "file": "Documento"
+    },
+    "header": {
+      "badge": {
+        "pending": "Esperando aceptación",
+        "assigned": "Asignado a ti",
+        "closed": "Cerrado"
+      },
+      "closed_hint": "Conversación finalizada. Se quitará de la lista en unos segundos."
+    },
+    "ring": {
+      "toast": {
+        "title": "⚡ Nueva conversación",
+        "from": "De {{name}}",
+        "action": "Ver"
+      },
+      "modal": {
+        "title": "Conversación entrante",
+        "timeout_label": "Tiempo restante",
+        "waiting_reassign": "Esperando reasignación...",
+        "accept": "Aceptar",
+        "reject": "Rechazar"
+      },
+      "sound": {
+        "enable": "Activar sonido",
+        "disable": "Silenciar"
+      },
+      "accept_success": "Conversación aceptada",
+      "accept_error": "No se pudo aceptar la conversación",
+      "reject_success": "Conversación rechazada",
+      "reject_error": "No se pudo rechazar la conversación",
+      "accepting": "Aceptando...",
+      "rejecting": "Rechazando...",
+      "list": {
+        "pending_preview": "Llamada entrante — acepta o rechaza"
+      },
+      "panel": {
+        "hint": "Acepta para abrir el chat o rechaza para reasignar"
+      },
+      "unknown_contact": "Contacto desconocido"
+    }
+  },
+  "supervision": {
+    "title": "Supervisión en Tiempo Real",
+    "about": "Acerca del Supervisor de Conversaciones",
+    "search": {
+      "placeholder": "Buscar agente"
+    },
+    "sort": {
+      "recent": "Actividad reciente"
+    },
+    "filters": {
+      "title": "Filtros",
+      "clear": "Limpiar",
+      "apply": "Aplicar",
+      "agent_status": "Estado del agente",
+      "channels": "Canales"
+    },
+    "kpi": {
+      "active_conversations": "Conversaciones activas",
+      "waiting": "En espera",
+      "longest_wait": "Espera más larga",
+      "agent_status": "Estado agentes"
+    },
+    "agent": {
+      "name": "Agente",
+      "role": "Rol",
+      "conversations": "Conversaciones",
+      "load": "carga",
+      "max": "maximo",
+      "status": {
+        "online": "En linea",
+        "busy": "Ocupado",
+        "offline": "Desconectado"
+      },
+      "roles": {
+        "whatsapp_expert": "Experto en WhatsApp",
+        "sms_support": "Soporte SMS",
+        "support": "Soporte"
+      }
+    }
+  },
+  "contacts": {
+    "title": "Contactos",
+    "not_found": "Contacto no encontrado",
+    "contacts_main": {
+      "title": "Contactos",
+      "description": "Gestiona tu audiencia y configura los campos de tus contactos.",
+      "fields_button": "Campos",
+      "create_list_banner": "Selecciona los contactos de la tabla para guardarlos en una nueva lista.",
+      "history_button": "Historial",
+      "csv_import_button": "Importar CSV",
+      "total_label": "Total contactos",
+      "matching_contacts": "{{count}} contactos coincidentes",
+      "matching_contacts_count": "{{count}} contactos",
+      "matching_contacts_pending": "— contactos (clic para calcular)",
+      "matching_contacts_cta": "Calcular coincidencias",
+      "news_month_label": "Nuevos este mes",
+      "total_audiences": "Audiencias",
+      "active_segments_label": "Segmentos activos",
+      "filters_button": "Filtros avanzados",
+      "export_button": "Exportar",
+      "selected_contacts": "contactos seleccionados",
+      "save_list_button": "Guardar como lista",
+      "clear_button": "Limpiar selección",
+      "name_header": "Nombre",
+      "phone_header": "Teléfono",
+      "search_contacts_placeholder": "Buscar por nombre...",
+      "no_contacts_found": "No se encontraron contactos",
+      "no_name": "Sin nombre",
+      "import": {
+        "wizard": {
+          "title": "Importar Audiencia",
+          "description": "Sube un archivo CSV para cargar tus contactos de forma masiva.",
+          "start_button": "Comenzar Importación"
+        },
+        "steps": {
+          "upload": {
+            "title": "Subir Archivo",
+            "dropzone_title": "Arrastra tu archivo CSV aquí",
+            "dropzone_subtitle": "O haz clic para buscar en tu equipo",
+            "alert_info": "Asegúrate de que tu archivo incluya una columna con el número de teléfono. Formatos soportados: E.164 (ej. +521234567890)."
+          },
+          "mapping": {
+            "title": "Mapeo de Columnas",
+            "csv_header": "Columna del CSV",
+            "system_header": "Campo en el Sistema",
+            "status_header": "Estado",
+            "mapped_status": "Mapeado",
+            "omitted_status": "Omitido",
+            "skip_option": "Omitir esta columna",
+            "phone_required_alert": "Debes mapear obligatoriamente la columna que contiene el Teléfono para continuar.",
+            "create_list_toggle": "¿Crear una lista con estos contactos?",
+            "create_list_description": "Crea una lista automática con todos los contactos que se importen exitosamente.",
+            "list_name_label": "Nombre de la nueva lista",
+            "list_name_placeholder": "Ej: Importación Clientes Mayo",
+            "list_description_label": "Descripción de la lista",
+            "list_description_placeholder": "Ej: Importación de prueba",
+            "list_name_taken_error": "Ya existe una lista con ese nombre. Elige un nombre diferente.",
+            "list_name_checking": "Verificando disponibilidad...",
+            "list_name_required_error": "El nombre de la lista es requerido y no puede estar vacío."
+          },
+          "status": {
+            "title": "¡Importación Iniciada!",
+            "description": "El archivo se ha cargado correctamente. El procesamiento se ejecutará en segundo plano de manera asíncrona.",
+            "list_title": "Lista creada",
+            "no_list_created": "No se creó una lista",
+            "final_note": "Puedes cerrar esta ventana de forma segura. Si deseas monitorear el progreso del procesamiento en tiempo real o revisar si existen registros con errores, abre el panel de \"Historial\" en la barra de herramientas principal.",
+            "metrics": {
+              "total_rows": "Total Filas",
+              "total_rows_sub": "Encontradas en CSV",
+              "imported": "Importados",
+              "imported_sub": "Registros creados",
+              "invalid": "Inválidos",
+              "invalid_sub": "Teléfonos erróneos"
+            },
+            "error_alert_title": "Error en la importación",
+            "error_alert_description": "Hubo un problema al procesar el archivo. Por favor, revisa el formato e intenta de nuevo.",
+            "counting_rows": "Contando registros",
+            "file_exceeds_rows_limit_error": "El archivo excede el límite máximo de {{max}} registros permitidos"
+          }
+        },
+        "error": {
+          "no_file_or_org": "Archivo u organización no encontrados.",
+          "generic": "Error al iniciar la importación.",
+          "file_type": "Por favor, selecciona un archivo .csv válido.",
+          "file_empty": "El archivo parece estar vacío o mal formateado."
+        },
+        "success": {
+          "started": "Importación iniciada correctamente.",
+          "file_read": "Archivo leído correctamente.",
+          "list_updated": "Lista de contactos actualizada."
+        },
+        "cancel_confirm": "¿Estás seguro de que deseas cancelar? Se perderá el progreso del mapeo."
+      },
+      "import_history": {
+        "title": "Historial de Importaciones",
+        "description": "Sigue el estado de tus importaciones en tiempo real.",
+        "no_records": "No se encontraron importaciones en esta sección.",
+        "new_import_btn": "Nueva Importación",
+        "completed_text": "Completada {{time}}",
+        "failed_text": "Falló {{time}}",
+        "started_text": "Iniciada {{time}}",
+        "processed": "contactos procesados",
+        "imported": "contactos importados",
+        "unknown_error_msg": "Ocurrió un error desconocido.",
+        "retrying": "Reintentando...",
+        "tabs": {
+          "all": "Todas",
+          "importing": "En Progreso",
+          "done": "Completadas",
+          "failed": "Con Error"
+        }
+      }
+    },
+    "errors": {
+      "load_contacts": "No pudimos cargar los contactos. Intenta de nuevo.",
+      "unknown": "Ocurrió un problema al trabajar con contactos."
+    },
+    "lists": {
+      "title": "Listas Manuales de Contactos",
+      "description": "Snapshots estáticos de contactos. Añade o elimina contactos manualmente.",
+      "new_list_button": "Nueva lista",
+      "loading_label": "Cargando listas...",
+      "error_loading_label": "Error al cargar listas",
+      "no_results_label": "No se encontraron listas con ese nombre",
+      "no_lists_label": "Aún no tienes listas creadas",
+      "search_list_placeholder": "Buscar lista...",
+      "delete": {
+        "confirm_title": "¿Eliminar lista de contactos?",
+        "confirm_description": "Esta acción no se puede deshacer.",
+        "confirm_button": "Eliminar",
+        "cancel_button": "Cancelar",
+        "success": "Lista de contactos eliminada",
+        "error": "Error al eliminar lista de contactos"
+      },
+      "card": {
+        "total_contacts": "Contactos",
+        "created_at": "Creada",
+        "last_updated_label": "Actualizado el {{date}}",
+        "view_contacts": "Ver contactos"
+      },
+      "new_list": {
+        "title": "Guardar como lista",
+        "count_contacts": "contactos",
+        "mode": "Modo",
+        "mode_new": "Nueva lista",
+        "mode_existing": "Agregar a existente",
+        "description_label": "Descripción (opcional)",
+        "description_placeholder": "Breve descripción de la lista...",
+        "name_label": "Nombre de la lista",
+        "name_placeholder": "ej: Clientes VIP",
+        "allow_criteria_label": "Permitir re-aplicar criterios",
+        "allow_criteria_description": "Botón 'Actualizar lista' visible en la lista",
+        "cancel": "Cancelar",
+        "create": "Crear lista",
+        "create_success": "Lista creada correctamente",
+        "edit_list": "Editar lista",
+        "save_changes": "Guardar cambios",
+        "edit_success": "Lista actualizada correctamente",
+        "general_request_error": "Ocurrió un error al procesar la solicitud",
+        "existing_search_placeholder": "Buscar lista...",
+        "add_to_list": "Añadir a lista",
+        "select_list_label": "Selecciona una lista",
+        "add_success": "Contactos añadidos correctamente",
+        "no_lists_available": "No hay listas disponibles"
+      },
+      "view_list": {
+        "nav_back": "Listas",
+        "add_contacts_button": "Añadir contactos",
+        "update_list_button": "Actualizar lista",
+        "total_contacts_label": "Contactos en lista",
+        "created_at_label": "Creada",
+        "last_updated_label": "Última actualización",
+        "export_button": "Exportar",
+        "saved_criteria_button": "criterios guardados",
+        "name_header": "Nombre",
+        "phone_header": "Teléfono",
+        "no_contacts": "No hay contactos en esta lista",
+        "processing_status": "Procesando...",
+        "of": "de",
+        "loading": "Cargando...",
+        "loading_list": "Cargando lista...",
+        "no_description_label": "Sin descripción",
+        "search_in_list_placeholder": "Buscar en la lista...",
+        "selected_members": "{{count}} contactos seleccionados",
+        "remove_from_list_button": "Eliminar de la lista",
+        "remove_success": "Contactos eliminados correctamente",
+        "remove_error": "Error al eliminar contactos",
+        "clear_selection": "Cancelar",
+        "export_success": "Lista exportada correctamente",
+        "export_error": "Error al exportar la lista",
+        "empty_list_campaign_error": "La lista seleccionada debe contener al menos un contacto para iniciar una campaña.",
+        "empty_list_warning_banner": "Esta lista no tiene contactos asignados actualmente, agrega contactos para habilitar la creación de campañas."
+      }
+    },
+    "total": "en total",
+    "no_data": "No hay contactos disponibles",
+    "error_loading": "Error al cargar contactos",
+    "of": "de",
+    "no_name": "Sin nombre",
+    "info": "Info",
+    "error_code": "Error {{code}}",
+    "select_list_type": "Seleccionar tipo de lista",
+    "all_types": "Todos los tipos",
+    "segments": {
+      "title": "Segmentos Inteligentes",
+      "subtitle": "Los segmentos se actualizan en tiempo real en función de las reglas.",
+      "new_segment": "Nuevo segmento",
+      "empty": "Todavía no hay segmentos",
+      "empty_description": "Crea tu primer segmento dinámico para agrupar contactos automáticamente.",
+      "contacts_count": "{{total}} contactos",
+      "contacts_match": "contactos coinciden",
+      "matching_contacts_count": "{{count}} contactos coinciden",
+      "matching_contacts_pending": "Aún sin calcular",
+      "matching_contacts_cta": "Calcular coincidencias",
+      "last_updated": "Actualizado el {{date}}",
+      "active": "Activo",
+      "inactive": "Inactivo",
+      "preview_btn": "Ver contactos",
+      "system_fields": {
+        "created_at": "Creado el"
+      },
+      "operators": {
+        "equals": "igual a",
+        "not_equals": "distinto de",
+        "contains": "contiene",
+        "not_contains": "no contiene",
+        "starts_with": "empieza con",
+        "ends_with": "termina con",
+        "is_empty": "está vacío",
+        "is_not_empty": "no está vacío",
+        "greater_than": "mayor que",
+        "less_than": "menor que",
+        "between": "entre",
+        "in": "incluye",
+        "not_in": "no incluye",
+        "between_separator": "y"
+      },
+      "sheet": {
+        "create_title": "Nuevo segmento",
+        "edit_title": "Editar segmento",
+        "badge_evaluating": "EVALUANDO",
+        "name_label": "Nombre del segmento",
+        "name_placeholder": "ej. Clientes VIP",
+        "description_label": "Descripción",
+        "description_placeholder": "Opcional",
+        "logic_label": "Las condiciones deben coincidir",
+        "logic_and": "TODAS (Y)",
+        "logic_or": "CUALQUIERA (O)",
+        "conditions_header": "CONDICIONES",
+        "add_condition": "Agregar condición",
+        "field_placeholder": "Campo",
+        "operator_placeholder": "Operador",
+        "value_placeholder": "Valor",
+        "operator_no_value": "Operador sin valor",
+        "cancel": "Cancelar",
+        "preview": "Vista previa",
+        "save": "Guardar segmento",
+        "saving": "Guardando...",
+        "success_create": "Segmento creado correctamente",
+        "success_update": "Segmento actualizado correctamente",
+        "error_save": "Error al guardar el segmento",
+        "min_one_condition": "Necesitas al menos una condición",
+        "calculate_helper": "Calcula los contactos coincidentes antes de guardar.",
+        "calculate_missing_rules": "Agrega al menos una regla para calcular las coincidencias.",
+        "calculate_error": "No pudimos calcular las coincidencias. Intenta de nuevo."
+      },
+      "preview": {
+        "title": "Contactos coincidentes",
+        "empty": "Ningún contacto coincide con estas reglas",
+        "showing": "Mostrando {{from}}–{{to}} de {{total}}"
+      },
+      "delete": {
+        "confirm_title": "¿Eliminar segmento?",
+        "confirm_description": "Esta acción no se puede deshacer.",
+        "confirm_button": "Eliminar",
+        "cancel_button": "Cancelar",
+        "success": "Segmento eliminado",
+        "error": "Error al eliminar el segmento"
+      }
+    },
+    "panel": {
+      "contact_label": "Contacto",
+      "id_label": "ID: {{id}}",
+      "created_at": "Fecha de creación",
+      "updated_at": "Última actividad",
+      "field": {
+        "name": "Nombre completo",
+        "phone": "Número de teléfono"
+      },
+      "custom_fields_description": "Enriquece el perfil de este contacto actualizando su información complementaria.",
+      "custom_fields": "Campos Personalizados",
+      "deleted_successfully": "Contacto eliminado correctamente",
+      "error_deleting": "Error al eliminar el contacto",
+      "no_data": "Sin datos",
+      "delete_contact": "Eliminar",
+      "edit_title": "Editar Contacto",
+      "edit_description": "Actualiza los campos personalizados de este contacto.",
+      "confirm_edit_title": "Confirmar Cambios",
+      "confirm_edit_description": "Por favor revisa que los datos editados sean correctos antes de guardar.",
+      "no_editable_fields": "No hay campos personalizados disponibles.",
+      "edit_success": "Contacto actualizado correctamente",
+      "edit_error": "Error al actualizar el contacto",
+      "delete": {
+        "confirm_title": "¿Eliminar contacto?",
+        "confirm_description": "Esta acción no se puede deshacer. El contacto será eliminado de forma permanente."
+      },
+      "campaign_history": {
+        "empty": "Este contacto no tiene historial de campañas.",
+        "empty_filtered": "No hay resultados para los filtros seleccionados.",
+        "filter": {
+          "all_channels": "Todos los canales",
+          "all_time": "Todo el tiempo",
+          "last_day": "Último día",
+          "last_7d": "Últimos 7 días",
+          "last_30d": "Últimos 30 días",
+          "last_90d": "Últimos 90 días"
+        },
+        "data": {
+          "title": "Detalle de envío",
+          "trigger_label": "Ver detalle",
+          "sid": "SID",
+          "from": "De",
+          "to": "Para",
+          "direction": "Dirección",
+          "num_media": "Adjuntos",
+          "num_segments": "Segmentos",
+          "date_sent": "Enviado",
+          "date_created": "Creado"
+        }
+      },
+      "tab_details": "Detalles",
+      "tab_campaign_history": "Historial de campañas",
+      "tab_comments": "Comentarios",
+      "tab_tasks": "Tareas"
+    },
+    "comments": {
+      "empty": "Aún no hay comentarios. Agrega uno para comenzar.",
+      "placeholder": "Agregar un comentario...",
+      "errors": {
+        "create": "No se pudo crear el comentario",
+        "update": "No se pudo actualizar el comentario",
+        "delete": "No se pudo eliminar el comentario"
+      }
+    },
+    "tasks": {
+      "empty": "No hay tareas aún. Crea una para comenzar.",
+      "titlePlaceholder": "Título de la tarea...",
+      "descriptionPlaceholder": "Descripción (opcional)...",
+      "filterAll": "Todas",
+      "filterMine": "Solo mías",
+      "statusPending": "Pendiente",
+      "statusInProgress": "En progreso",
+      "statusCompleted": "Completada",
+      "priorityLow": "Baja",
+      "priorityMedium": "Media",
+      "priorityHigh": "Alta",
+      "overdue": "Vencida",
+      "dueToday": "Vence hoy",
+      "new_task": "Nueva tarea",
+      "contact_info": "Información del contacto"
+    },
+    "launch_modal": {
+      "description": "Gestión centralizada de contactos, listas estáticas y segmentos dinámicos para campañas más inteligentes.",
+      "close": "Cerrar",
+      "explore_contacts": "Explorar Contactos",
+      "view_changelog": "Ver Changelog"
+    }
+  },
+  "changelog": {
+    "title": "Registro de Cambios",
+    "description": "Las últimas novedades y mejoras de Reach.",
+    "new": "Nuevo",
+    "v135": {
+      "title": "v1.3.5 — Plantillas más flexibles, audiencias ágiles y datos consistentes",
+      "description": "Una versión enfocada en agilizar el trabajo con audiencias grandes y mantener la información de plantillas y contactos siempre sincronizada.",
+      "features": {
+        "templateEditing": {
+          "title": "Edición de Plantillas de WhatsApp",
+          "description": "Actualiza plantillas compatibles directamente desde Reach con un flujo más seguro.",
+          "feature1": "Precarga el contenido actual para editarlo sin empezar de cero",
+          "feature2": "Sincroniza primero los cambios con Twilio para evitar inconsistencias",
+          "feature3": "Identifica con claridad los campos y botones que requieren correcciones"
+        },
+        "audiencePerformance": {
+          "title": "Audiencias y Campañas más Ágiles",
+          "description": "La navegación mantiene un rendimiento constante incluso con grandes volúmenes de contactos.",
+          "feature1": "Paginación optimizada en contactos, miembros de listas y campañas",
+          "feature2": "Filtros por estado para localizar rápidamente miembros de campaña",
+          "feature3": "Selecciones y conteos se conservan correctamente al cambiar de página"
+        },
+        "contactReliability": {
+          "title": "Contactos más Fáciles de Importar y Gestionar",
+          "description": "La información de contactos se valida y actualiza de forma más consistente.",
+          "feature1": "Importa teléfonos E.164 con o sin el signo +",
+          "feature2": "Los teléfonos se normalizan automáticamente antes de guardarse",
+          "feature3": "Eliminaciones y ediciones actualizan al instante listas, contadores y vistas"
+        }
+      }
+    },
+    "v133": {
+      "title": "v1.3.3 — Conversaciones más flexibles y mejor rendimiento",
+      "description": "Una release enfocada en facilitar las conversaciones salientes y mejorar el rendimiento general de Reach.",
+      "features": {
+        "outboundConversations": {
+          "title": "Conversaciones Salientes más Flexibles",
+          "description": "Inicia conversaciones de WhatsApp de forma más sencilla desde Reach.",
+          "feature1": "Utiliza plantillas aprobadas para iniciar una conversación",
+          "feature2": "Selecciona un contacto existente o ingresa un número manual",
+          "feature3": "Personaliza los valores del mensaje antes de enviarlo"
+        },
+        "templateReliability": {
+          "title": "Mejoras en la Gestión de Plantillas",
+          "description": "La creación y el uso de plantillas ahora cuentan con validaciones más claras y un flujo más consistente.",
+          "feature1": "Configura botones, teléfonos y enlaces con mayor claridad",
+          "feature2": "Recibe mensajes más claros cuando una plantilla necesita correcciones",
+          "feature3": "Actualiza plantillas y remitentes fácilmente desde la aplicación"
+        },
+        "performance": {
+          "title": "Mejoras de Rendimiento y Estabilidad",
+          "description": "Reach responde de forma más rápida y eficiente en las tareas del día a día.",
+          "feature1": "Búsquedas más ágiles en contactos, listas y campañas",
+          "feature2": "Conversaciones y notificaciones más eficientes",
+          "feature3": "Mejor respuesta al trabajar con grandes volúmenes de información"
+        }
+      }
+    },
+    "v132": {
+      "title": "v1.3.2 — PWA, archivado de campañas e importaciones más rápidas",
+      "description": "Un hotfix que hace Reach instalable como app nativa, añade archivado de miembros de campaña para audiencias grandes y elimina timeouts y deadlocks en importaciones.",
+      "features": {
+        "pwaSupport": {
+          "title": "App Web Progresiva Instalable",
+          "description": "Reach ahora se puede instalar como app nativa en escritorio y móvil, con soporte offline y accesos directos.",
+          "feature1": "Prompt de instalación y pantalla de carga para una experiencia tipo app",
+          "feature2": "Pantalla offline y manejo de safe area en iOS para layouts consistentes",
+          "feature3": "Accesos directos para ir directamente a campañas y bandeja de entrada"
+        },
+        "importPerformance": {
+          "title": "Importaciones de Contactos más Rápidas y Seguras",
+          "description": "Las importaciones masivas de 10K+ contactos son ahora 3–5x más rápidas y ya no presentan timeouts ni deadlocks.",
+          "feature1": "Payload de respuesta compacto reduce la transferencia de ~1.14 MB a ~138 bytes por lote",
+          "feature2": "Eliminados los statement timeouts en importaciones de 10K+ contactos",
+          "feature3": "Corregido el deadlock en el trigger de la cola de métricas de campaña durante el procesamiento concurrente de webhooks",
+          "feature4": "Claiming atómico de importaciones y checkpoints por lote previenen trabajo duplicado al reanudar"
+        }
+      }
+    },
+    "v131": {
+      "title": "v1.3.1 — Mejoras de confiabilidad y flujo de trabajo",
+      "description": "Una versión enfocada en agilizar los flujos de audiencias, fortalecer la gestión de plantillas y hacer más confiable el procesamiento de mensajes de campañas.",
+      "features": {
+        "templateBuilder": {
+          "title": "Botones de Plantillas más Flexibles",
+          "description": "Crea plantillas de WhatsApp con combinaciones de botones más flexibles y validaciones más claras.",
+          "feature1": "Los tipos y campos de botones se validan de forma consistente",
+          "feature2": "Cambiar el tipo de botón restablece de forma segura los campos incompatibles",
+          "feature3": "El flujo inicial de sincronización de plantillas es más confiable para organizaciones existentes"
+        },
+        "audienceUpdates": {
+          "title": "Actualizaciones Automáticas de Audiencias",
+          "description": "Tus contactos, listas y segmentos se mantienen sincronizados mientras trabajas.",
+          "feature1": "Las importaciones de contactos actualizan el listado con respuesta optimista",
+          "feature2": "Las nuevas listas se reflejan automáticamente después de una importación",
+          "feature3": "La caché y la recarga de segmentos reducen resultados desactualizados"
+        },
+        "webhookProcessing": {
+          "title": "Procesamiento de Mensajes más Confiable",
+          "description": "Los callbacks de campañas ahora utilizan un flujo de colas y reconciliación más resistente.",
+          "feature1": "Los callbacks de webhooks se enrutan por organización",
+          "feature2": "Los mensajes atascados se reconcilian automáticamente contra Twilio",
+          "feature3": "El procesamiento de colas admite concurrencia configurable y lotes más grandes"
+        },
+        "exportPerformance": {
+          "title": "Exportación de Reportes Optimizada",
+          "description": "Las exportaciones CSV de campañas grandes ahora completan sin timeout, soportando hasta 500k contactos por campaña.",
+          "feature1": "Paginación por lotes con índice optimizado para campañas de gran volumen",
+          "feature2": "Resolución de errores de Twilio directamente en la base de datos para descargas más rápidas"
+        }
+      }
+    },
+    "v100": {
+      "title": "v1.0 — Beta",
+      "description": "Lanzamiento beta de la plataforma Reach."
+    },
+    "v110": {
+      "title": "v1.1.0 — Campañas",
+      "description": "Lanzamiento inicial del módulo de campañas con envíos masivos de SMS y WhatsApp."
+    },
+    "v120": {
+      "title": "v1.2.0 — Módulo de Audiencias",
+      "description": "Lanzamiento completo del módulo de gestión de audiencias y contactos.",
+      "features": {
+        "contacts": {
+          "title": "Contactos Centralizados",
+          "description": "Base de datos unificada con campos personalizables.",
+          "feature1": "Campos personalizados de texto, número, fecha y booleano",
+          "feature2": "Gestión centralizada de toda tu base de contactos",
+          "feature3": "Validación y normalización de teléfonos"
+        },
+        "lists": {
+          "title": "Listas Estáticas",
+          "description": "Grupos fijos de contactos que gestionas manualmente.",
+          "feature1": "Importación masiva desde la subida de CSV",
+          "feature2": "Gestión manual de miembros individual o en lote",
+          "feature3": "Listas reutilizables en múltiples campañas"
+        },
+        "segments": {
+          "title": "Segmentos Dinámicos",
+          "description": "Audiencias que se calculan automáticamente según reglas.",
+          "feature1": "Constructor visual de reglas con operadores",
+          "feature2": "Preview en tiempo real de contactos que cumplen criterios",
+          "feature3": "Actualización automática de segmentos"
+        },
+        "integration": {
+          "title": "Integración con Campañas",
+          "description": "Selecciona listas o segmentos predefinidos al crear campañas. Ya no necesitas subir CSV en cada envío."
+        }
+      }
+    },
+    "v121": {
+      "title": "v1.2.1 — RCS Beta",
+      "description": "Nueva experiencia de mensajería con RCS y mejoras de estabilidad.",
+      "features": {
+        "rcs": {
+          "title": "Canal RCS (Beta)",
+          "description": "Comunicación rica con mensajes interactivos y multimedia.",
+          "feature1": "Soporte para RCS en configuración de campañas",
+          "feature2": "Badges y analytics específicos para RCS",
+          "feature3": "Integración con consola Twilio para gestión de remitentes"
+        },
+        "importRetry": {
+          "title": "Reintento de Importaciones",
+          "description": "Recupera importaciones de contactos que fallaron.",
+          "feature1": "Reanudación de importaciones desde el punto de interrupción",
+          "feature2": "Tolerancia a errores durante importación de CSV",
+          "feature3": "Recuperación de importaciones fallidas"
+        },
+        "autoPause": {
+          "title": "Auto-pausa de Campañas",
+          "description": "Protección automática para evitar envíos problemáticos.",
+          "feature1": "Pausa automática al detectar bloques de plantillas meta",
+          "feature2": "Pausa por fallos genéricos en batch"
+        },
+        "performance": {
+          "title": "Optimización de Rendimiento",
+          "description": "Mejoras en velocidad y estabilidad para bases de datos grandes."
+        }
+      }
+    },
+    "v130": {
+      "title": "v1.3.0 - Reach Conversations (Beta)",
+      "description": "Bandeja de entrada unificada para conversaciones por WhatsApp con enrutamiento de agentes a través de Reach Router. Disponible en fase beta.",
+      "features": {
+        "conversations": {
+          "title": "Reach Conversations (Beta)",
+          "description": "Gestiona conversaciones en tiempo real por WhatsApp desde una sola bandeja de entrada.",
+          "feature1": "Bandeja de entrada unificada para WhatsApp y demás canales",
+          "feature2": "Mensajería en tiempo real con Reach",
+          "feature3": "Ring de asignación para aceptar o rechazar conversaciones entrantes"
+        },
+        "routerIntegration": {
+          "title": "Integración con Reach Router",
+          "description": "Reach Router es la fuente de verdad de agentes, presencia y capacidad."
+        }
+      }
+    },
+    "v122": {
+      "title": "v1.2.2 - Plantillas de Mensajes",
+      "description": "Diseña y gestiona plantillas de WhatsApp con un nuevo Smart Builder sincronizado con Twilio.",
+      "features": {
+        "templates": {
+          "title": "Smart Builder de Plantillas",
+          "description": "Crea y edita plantillas de WhatsApp visualmente con vista previa en tiempo real.",
+          "feature1": "Soporte para header, body, footer, botones y carrusel",
+          "feature2": "Panel de vista previa fiel al renderizado de WhatsApp",
+          "feature3": "Validación alineada a los requisitos de aprobación de Meta"
+        },
+        "mediaUpload": {
+          "title": "Carga de Imágenes en Plantillas",
+          "description": "Adjunta imágenes, videos o documentos a tus plantillas y úsalos de inmediato.",
+          "feature1": "Sube archivos directamente desde el header, las tarjetas del carrusel o los botones",
+          "feature2": "Retroalimentación instantánea de carga y validación antes de guardar la plantilla"
+        },
+        "twilioSync": {
+          "title": "Sincronización con Twilio",
+          "description": "Mantiene actualizado el estado de aprobación de las plantillas automáticamente.",
+          "feature1": "La sincronización inicial importa las plantillas existentes en Twilio",
+          "feature2": "El botón de actualizar refresca los estados de aprobación a demanda"
+        },
+        "campaignGuard": {
+          "title": "Protección en Campañas",
+          "description": "Ya no es posible lanzar campañas dirigidas a listas o segmentos sin contactos."
+        },
+        "contactsFixes": {
+          "title": "Correcciones en Contactos",
+          "description": "Mejoras de confiabilidad para listas y segmentos.",
+          "feature1": "Ya no se permiten nombres compuestos solo de espacios al crear listas o campos",
+          "feature2": "Las lecturas de contactos ahora usan consultas directas a la base de datos para mejor rendimiento"
+        }
+      }
+    }
+  },
+  "template_types": {
+    "text": "Texto",
+    "media": "Media",
+    "image": "Imagen",
+    "video": "Video",
+    "audio": "Audio",
+    "document": "Documento",
+    "quick_reply": "Respuesta rápida",
+    "call_to_action": "Botón de acción",
+    "list": "Lista",
+    "product": "Producto",
+    "product_list": "Lista de productos",
+    "location": "Ubicación",
+    "catalog": "Catálogo",
+    "flow": "Flujo (Flow)",
+    "location_request": "Solicitud de ubicación",
+    "authentication": "Autenticación (OTP)",
+    "carousel": "Carrusel / Tarjetas",
+    "unknown": "Sin tipo"
+  },
+  "landing": {
+    "navbar": {
+      "home": "Inicio",
+      "features": "Características",
+      "pricing": "Precios",
+      "about": "Acerca de",
+      "sign_in": "Iniciar sesión",
+      "get_started": "Comenzar ahora",
+      "changelog": "Registro de cambios"
+    },
+    "get_demo": "Solicita una Demo",
+    "talk_to_sales": {
+      "label": "Habla con ventas",
+      "subject": "Solicitud de demostración",
+      "body": "Me gustaría solicitar una demostración de Reach."
+    },
+    "seo": {
+      "title": "Reach — Plataforma de Mensajería Masiva SMS y WhatsApp | Automatiza Campañas",
+      "description": "Plataforma potente para automatizar campañas de SMS y WhatsApp. Envía mensajes masivos personalizados, gestiona contactos, programa campañas y analiza resultados en tiempo real. Impulsado por Twilio.",
+      "keywords": "marketing SMS, API WhatsApp Business, SMS masivo, mensajería masiva, automatización campañas, plataforma Twilio, campañas SMS, marketing WhatsApp, gestión contactos, automatización marketing, mensajes personalizados, WhatsApp masivo"
+    },
+    "hero": {
+      "title1": "Conecta con tus clientes",
+      "title2": "a gran escala",
+      "subtitle": "La plataforma todo-en-uno para automatizar campañas de SMS y WhatsApp. Personaliza mensajes, programa envíos y monitorea el rendimiento en tiempo real."
+    },
+    "get_started": "Comenzar ahora",
+    "book_demo": "Reserva una demo",
+    "features": {
+      "title": "Todo lo que Necesitas en una Plataforma",
+      "description": "Herramientas potentes para gestionar todas tus comunicaciones con clientes desde un solo panel.",
+      "campaigns": {
+        "title": "Automatización de Campañas",
+        "description": "Envía mensajes masivos personalizados con variables dinámicas. Automatiza tu alcance y contacta miles de clientes al instante.",
+        "checklist": {
+          "1": "Personalización dinámica",
+          "2": "Programación automatizada"
+        }
+      },
+      "conversations": {
+        "title": "Bandeja de Entrada Unificada",
+        "description": "Gestiona todas las conversaciones con clientes a través de SMS y WhatsApp en un solo lugar. Colabora con tu equipo sin fricciones.",
+        "checklist": {
+          "1": "Inbox multitarea",
+          "2": "Colaboración en equipo"
+        }
+      }
+    },
+    "pricing": {
+      "title": "Precios Simples y Transparentes",
+      "description": "Planes flexibles que escalan con tu negocio. Sin costos ocultos.",
+      "popular": "Más popular",
+      "platform": {
+        "title": "Plataforma Reach",
+        "description": "Clave de licencia incluida",
+        "price": "$350",
+        "price_per_month": "mo",
+        "billed_annually": "Facturado anualmente",
+        "cta": "Reserva una demo",
+        "checklist": {
+          "1": "3 usuarios del equipo incluidos",
+          "2": "Configuración inicial personalizada",
+          "3": "Asistencia prioritaria",
+          "4": "Campañas ilimitadas*",
+          "5": "Reach Campaigns",
+          "6": "Reach Conversations",
+          "7": "Variables dinámicas"
+        }
+      },
+      "additional_user": {
+        "title": "Usuario adicional",
+        "price": "$30",
+        "price_per_month": "mo",
+        "cta": "Contáctenos",
+        "badge": "Complemento",
+        "checklist": {
+          "1": "Por puesto adicional",
+          "2": "Acceso completo para todo el equipo",
+          "3": "Bandeja de entrada compartida"
+        }
+      }
+    },
+    "footer": {
+      "rights": "Todos los derechos reservados."
+    }
+  },
+  "campaign_member": {
+    "error": {
+      "STUCK_INFLIGHT": "Mensaje atascado en tránsito.",
+      "63024": "Número de WhatsApp inválido o inactivo.",
+      "63049": "Bloqueado por límites de marketing de Meta.",
+      "63016": "Sesión de 24h expirada. Usa una plantilla.",
+      "63032": "Restricción temporal en la cuenta destino (Meta).",
+      "21211": "Formato de teléfono inválido.",
+      "63018": "Límite de envíos excedido.",
+      "21614": "No es un número móvil válido.",
+      "21635": "No se admiten envíos a teléfonos fijos.",
+      "30007": "Mensaje filtrado (bloqueo por spam/operador).",
+      "21656": "Variables de plantilla inválidas o vacías.",
+      "DEFAULT": "Error desconocido (Código: {{code}})."
+    }
+  },
+  "templates": {
+    "smart_builder": "Constructor Inteligente",
+    "preview_panel": {
+      "title": "Previsualización de plantilla",
+      "description": "Vista previa de la plantilla de mensaje"
+    },
+    "submit_approval": {
+      "hint": "Esta plantilla requiere aprobación antes de usarse.",
+      "button": "Enviar a Aprobación",
+      "success": "Enviada a aprobación correctamente.",
+      "error": "Error al enviar a aprobación.",
+      "dialog_title": "Enviar a aprobación",
+      "dialog_description": "Selecciona la categoría que mejor describe esta plantilla. Se enviará a Meta para revisión. El proceso puede tardar hasta 24 horas.",
+      "category_label": "Categoría",
+      "category_placeholder": "Selecciona una categoría",
+      "category_utility": "Utilidad",
+      "category_marketing": "Marketing",
+      "category_authentication": "Autenticación (OTP)"
+    },
+    "delete": {
+      "hint": "Eliminar esta plantilla permanentemente.",
+      "button": "Eliminar Plantilla",
+      "success": "Plantilla eliminada correctamente.",
+      "error": "Error al eliminar plantilla.",
+      "confirm_title": "¿Eliminar plantilla?",
+      "confirm_desc": "Esta acción no se puede deshacer. ¿Deseas continuar?"
+    },
+    "error_title": "Error al cargar plantillas",
+    "title": "Plantillas de Mensaje",
+    "description": "Diseña, gestiona y monitorea plantillas de comunicación para estandarizar el contacto con tus clientes.",
+    "edit_title": "Editar Plantilla",
+    "edit_desc": "Modifica tu plantilla existente",
+    "search_placeholder": "Buscar plantillas...",
+    "refresh": "Actualizar",
+    "sync_notice": {
+      "title": "Sincronización inicial requerida",
+      "description": "Al sincronizar, importaremos tus plantillas actuales de Twilio por única vez. Tras este paso, cualquier plantilla nueva deberá crearse exclusivamente desde Reach para poder usarse en Campañas."
+    },
+    "refresh_notice": {
+      "title": "Gestión exclusiva en Reach",
+      "description": "El botón de actualizar solo sincroniza los estados de aprobación. Las plantillas creadas directamente en Twilio ya no se importarán automáticamente. Por favor, crea y gestiona tus plantillas desde aquí."
+    },
+    "new": "Nueva Plantilla",
+    "empty": {
+      "title": "Sin plantillas aún",
+      "description": "Aún no has creado ninguna plantilla de mensaje. Comienza creando una nueva plantilla."
+    },
+    "filter": {
+      "status": "Estado",
+      "all_statuses": "Todos los estados",
+      "select_status": "Filtrar por estado"
+    },
+    "status": {
+      "approved": "Aprobada",
+      "pending": "Pendiente",
+      "rejected": "Rechazada",
+      "draft": "Borrador",
+      "unsubmitted": "No enviada",
+      "received": "Recibida",
+      "paused": "Pausada",
+      "disabled": "Deshabilitada"
+    },
+    "table": {
+      "name": "Nombre",
+      "language": "Idioma",
+      "status": "Estado",
+      "types": "Tipos",
+      "support": "Soporte",
+      "created": "Creada",
+      "updated": "Actualizada",
+      "empty": "No se encontraron plantillas."
+    },
+    "creation": {
+      "title": "Crear Nueva Plantilla",
+      "error": "No se pudo crear la plantilla.",
+      "success": "Plantilla creada exitosamente.",
+      "authentication_note": "Las plantillas de autenticación (OTP) requieren contener la variable para el código (ej. {{code}} o {{1}}) y no admiten cabeceras, pies de página ni botones interactivos.",
+      "description": "Crea una nueva plantilla para enviar mensajes por WhatsApp. Requiere aprobación de Meta.",
+      "name": "Nombre",
+      "name_placeholder": "ej. recordatorio_pago",
+      "language": "Idioma",
+      "language_placeholder": "ej. ES, ES_MX",
+      "category": "Categoría",
+      "category_placeholder": "ej. MARKETING",
+      "submit": "Guardar y Continuar"
+    },
+    "create_title": "Crear Plantilla de Mensaje",
+    "create_success": "Plantilla creada exitosamente.",
+    "create_error": "No se pudo crear la plantilla.",
+    "update_success": "La plantilla se ha actualizado correctamente.",
+    "update_error": "Error al actualizar la plantilla.",
+    "name_in_use": "No se puede usar este nombre",
+    "invalid_phone_number": "El número de teléfono no es válido",
+    "invalid_button_url": "La URL del botón no es válida.",
+    "authentication_note": "Las plantillas de autenticación (OTP) requieren contener la variable para el código (ej. {{code}} o {{1}}) y no admiten cabeceras, pies de página ni botones interactivos.",
+    "validation": {
+      "required": "Por favor completa todos los campos requeridos.",
+      "media_required": "Se requiere una URL de media para plantillas de tipo media.",
+      "name_required": "El nombre de la plantilla es requerido",
+      "name_format": "Solo letras minúsculas, números y guiones bajos",
+      "language_required": "El idioma es requerido",
+      "category_required": "La categoría es requerida",
+      "header_text_max": "El texto de cabecera debe tener máximo 60 caracteres",
+      "body_max": "El cuerpo del mensaje debe tener máximo 1024 caracteres",
+      "footer_max": "El pie de página debe tener máximo 60 caracteres",
+      "card_title_max": "El título de la tarjeta debe tener máximo 60 caracteres",
+      "card_body_max": "El cuerpo de la tarjeta debe tener máximo 1024 caracteres",
+      "auth_carousel_not_allowed": "El carrusel no está permitido en plantillas de AUTENTICACIÓN.",
+      "auth_header_not_allowed": "Las cabeceras no están permitidas en plantillas de AUTENTICACIÓN.",
+      "auth_footer_not_allowed": "Los pies de página no están permitidos en plantillas de AUTENTICACIÓN.",
+      "auth_buttons_not_allowed": "Los botones no están permitidos en plantillas de AUTENTICACIÓN.",
+      "auth_variable_required": "Las plantillas de autenticación deben contener al menos una variable para el código (ej. {{code}} o {{1}}).",
+      "carousel_card_count": "El carrusel debe contener entre 2 y 10 tarjetas.",
+      "carousel_card_title_or_body": "La tarjeta debe tener un título o cuerpo.",
+      "carousel_card_media_required": "La URL de multimedia de la tarjeta es requerida.",
+      "carousel_card_buttons_count_mismatch": "La tarjeta debe tener el mismo número de botones.",
+      "carousel_card_buttons_type_mismatch": "El tipo de botón debe coincidir.",
+      "body_required": "El cuerpo del mensaje es requerido",
+      "media_header_url_required": "Se requiere una URL o archivo subido para cabeceras multimedia.",
+      "text_header_required": "El texto de cabecera es requerido.",
+      "buttons_min": "Se requieren al menos 2 botones cuando se añaden botones.",
+      "buttons_max_qr": "Se permite un máximo de 10 botones de Respuesta Rápida.",
+      "buttons_max_cta": "Se permite un máximo de 2 botones de Llamada a la Acción.",
+      "buttons_max_phone": "Se permite un máximo de 1 botón de número de teléfono.",
+      "button_type_qr": "El tipo del botón debe ser Respuesta Rápida.",
+      "button_type_cta": "El tipo del botón debe ser de Llamada/Enlace (CTA).",
+      "button_text_required": "El texto del botón es requerido.",
+      "button_text_max": "El texto del botón debe tener máximo 25 caracteres.",
+      "button_url_required": "La URL del botón es requerida.",
+      "button_url_invalid": "La URL del botón contiene una configuración de variable inválida (debe estar al final de la ruta).",
+      "button_phone_required": "El número de teléfono del botón es requerido.",
+      "button_phone_format": "El número de teléfono debe estar en formato E.164 (ej. +1234567890).",
+      "button_titles_unique": "Los títulos de los botones deben ser únicos dentro de la misma plantilla.",
+      "variable_name_invalid": "La variable \"{{name}}\" es inválida. Usa solo letras, números y guiones bajos (ej. {{order_id}}, {{1}}).",
+      "form_has_errors": "Por favor revisa los campos marcados en rojo."
+    },
+    "form": {
+      "name": "Nombre de la plantilla",
+      "name_placeholder": "ej_promocion_verano",
+      "name_help": "Solo minúsculas, números y guiones bajos.",
+      "whatsapp_mode": "Modo WhatsApp",
+      "whatsapp_mode_help": "Habilitar para plantillas de WhatsApp que requieren aprobación",
+      "generic_template_info": "Plantilla genérica para RCS y otros canales (sin aprobación requerida)",
+      "type": "Tipo de plantilla",
+      "body": "Cuerpo del mensaje",
+      "body_placeholder": "Hola {{name}}, tu pedido está listo!",
+      "variables_help": "Usa {{name}}, {{code}}, para variables dinámicas.",
+      "media": "URL de media",
+      "media_help": "URL pública de imagen o video.",
+      "buttons": "Botones",
+      "add_button": "Agregar botón",
+      "no_buttons": "Sin botones. Haz clic en \"Agregar botón\" para comenzar.",
+      "preview": "Vista previa",
+      "language": "Idioma",
+      "category": "Categoría",
+      "enable_carousel": "Habilitar Carrusel",
+      "carousel_title": "Tarjetas del Carrusel ({{count}}/10)",
+      "add_card": "Agregar Tarjeta",
+      "delete_card": "Eliminar Tarjeta",
+      "edit_card": "Tarjeta",
+      "edit_card_help": "(Define los botones de las demás tarjetas)",
+      "card_media_url": "URL de multimedia o subir archivo *",
+      "card_title": "Título de la Tarjeta",
+      "card_title_placeholder": "ej. ¡Llegó el verano!",
+      "card_body": "Cuerpo de la Tarjeta",
+      "card_buttons": "Botones de la Tarjeta ({{count}})",
+      "button_type": "Tipo de Botones",
+      "button_type_qr": "Respuesta Rápida",
+      "button_type_cta": "Llamada/Enlace CTA",
+      "header_title": "Cabecera de la Plantilla",
+      "header_none": "Sin Cabecera",
+      "header_text": "Texto",
+      "header_media": "Multimedia (Imagen/Video/Documento)",
+      "header_text_label": "Texto de Cabecera *",
+      "header_text_placeholder": "ej. ¡Bienvenido a Reach!",
+      "media_label": "Multimedia *",
+      "or_url": "O URL:",
+      "body_title": "Cuerpo del Mensaje *",
+      "footer_title": "Pie de Página",
+      "footer_placeholder": "ej. Envía STOP para cancelar",
+      "buttons_title": "Botones Interactivos",
+      "button_type_general_qr": "Respuesta Rápida",
+      "button_type_general_cta": "Llamada a la Acción",
+      "uploading": "Subiendo archivo...",
+      "upload_success": "Archivo subido con éxito!",
+      "upload_error": "Error al subir archivo: {{error}}",
+      "button_editor": {
+        "button_title": "Botón",
+        "action_type": "Tipo de acción",
+        "label": "Etiqueta",
+        "label_placeholder": "ej. Visitar sitio web",
+        "url": "URL",
+        "phone": "Número de teléfono"
+      }
+    },
+    "type_indicator": {
+      "title": "Tipo de plantilla detectado",
+      "types": {
+        "twilio_text": "Texto plano",
+        "twilio_media": "Multimedia",
+        "twilio_quick_reply": "Respuesta rápida",
+        "twilio_quick-reply": "Respuesta rápida",
+        "twilio_list-picker": "Listas",
+        "twilio_call_to_action": "Botón de acción",
+        "twilio_call-to-action": "Botón de acción",
+        "twilio_card": "Tarjeta",
+        "whatsapp_card": "Tarjeta",
+        "twilio_carousel": "Carrusel",
+        "twilio_flows": "Flujos",
+        "whatsapp_authentication": "Autenticación"
+      },
+      "descriptions": {
+        "twilio_text": "Plantilla de texto plano básica. Compatible con SMS y todos los canales.",
+        "twilio_media": "Plantilla con cabecera multimedia (imagen/video/documento).",
+        "twilio_quick_reply": "Botones rápidos para respuestas de un solo toque.",
+        "twilio_quick-reply": "Botones rápidos para respuestas de un solo toque.",
+        "twilio_list-picker": "Plantilla de lista con opciones seleccionables.",
+        "twilio_call_to_action": "Botones para abrir un enlace o llamar a un número telefónico.",
+        "twilio_call-to-action": "Botones para abrir un enlace o llamar a un número telefónico.",
+        "twilio_card": "Plantilla enriquecida que soporta Texto/Media en Cabecera, Cuerpo, Pie y Botones.",
+        "whatsapp_card": "Plantilla enriquecida que soporta Texto/Media en Cabecera, Cuerpo, Pie y Botones.",
+        "twilio_carousel": "Plantilla de Carrusel con hasta 10 tarjetas dinámicas consecutivas.",
+        "twilio_flows": "Plantilla de Flujos con opciones seleccionables.",
+        "whatsapp_authentication": "Plantilla de Autenticación para códigos de verificación."
+      }
+    },
+    "view_list": {
+      "of": "de"
+    },
+    "create_desc": "Crea una nueva plantilla para enviar mensajes por WhatsApp. Requiere aprobación de Meta.",
+    "launch_modal": {
+      "description": "Un nuevo Smart Builder para diseñar, validar y sincronizar tus plantillas de WhatsApp con Twilio.",
+      "close": "Cerrar",
+      "explore_templates": "Explorar Plantillas",
+      "view_changelog": "Ver Changelog"
+    }
+  },
+  "announcements": {
+    "close": "Cerrar",
+    "view_changelog": "Ver Changelog",
+    "explore_conversations": "Explorar Conversaciones",
+    "explore_templates": "Explorar Plantillas"
+  },
+  "admin": {
+    "portal_badge": "Super Admin",
+    "access_denied": {
+      "title": "Acceso restringido",
+      "description": "Has iniciado sesión, pero tu cuenta no tiene acceso a este portal. Si crees que es un error, cierra sesión e inténtalo de nuevo con una cuenta autorizada.",
+      "sign_out": "Cerrar sesión"
+    },
+    "errors": {
+      "global_kpis": "No se pudieron cargar los KPIs globales",
+      "org_details": "No se pudo cargar la información de la organización",
+      "org_kpis": "No se pudieron cargar los KPIs de la organización",
+      "organizations_list": "No se pudo cargar el listado de organizaciones",
+      "campaigns_list": "No se pudo cargar el listado de campañas",
+      "members_list": "No se pudo cargar el listado de miembros"
+    },
+    "members_by_role": {
+      "title": "Distribución de Miembros por Rol (Total Histórico)",
+      "tooltip_suffix": "miembros",
+      "total_label": "Total",
+      "empty": "Sin datos de roles disponibles"
+    },
+    "time_range": {
+      "placeholder": "Rango de tiempo",
+      "start_date": "Fecha inicial",
+      "end_date": "Fecha final",
+      "last_hour": "Última hora",
+      "today": "Últimas 24 horas",
+      "last_month": "Este mes",
+      "this_year": "Este año",
+      "all_time": "Todo el tiempo",
+      "custom_range": "Rango personalizado..."
+    },
+    "organization_detail": {
+      "back_to_overview": "Volver al resumen",
+      "config_card": {
+        "title": "Configuración y límites de la organización",
+        "slug": "Slug",
+        "max_users": "Límite de usuarios",
+        "max_campaigns": "Límite de campañas/mes",
+        "timezone": "Zona horaria",
+        "locale": "Idioma / Región",
+        "created_at": "Fecha de registro",
+        "unlimited": "Sin límite"
+      },
+      "lifetime_kpis": {
+        "title": "Dimensiones históricas de la organización",
+        "description": "Capacidad histórica de la organización y alcance en base de datos"
+      },
+      "period_kpis": {
+        "title": "Actividad de la organización en el periodo",
+        "description": "Métricas de rendimiento calculadas estrictamente en el rango seleccionado"
+      },
+      "campaigns": {
+        "title": "Campañas de la organización ({{count}})",
+        "search_placeholder": "Buscar campaña por nombre...",
+        "filters": {
+          "all_channels": "Todos los canales"
+        },
+        "empty": "No se encontraron campañas para esta organización en el período."
+      },
+      "members": {
+        "title": "Miembros de la organización ({{count}})",
+        "search_placeholder": "Buscar miembro por nombre o correo...",
+        "filters": {
+          "all_roles": "Todos los roles"
+        },
+        "table": {
+          "member_name": "Nombre del miembro",
+          "joined_at": "Se unió el"
+        },
+        "empty": "No se encontraron miembros para esta organización."
+      }
+    },
+    "overview": {
+      "title": "Resumen de la plataforma",
+      "description": "Métricas globales de la plataforma, agregados históricos y directorio de organizaciones.",
+      "lifetime_kpis": {
+        "title": "Totales históricos y demografía de usuarios",
+        "description": "Dimensiones históricas de la plataforma y conteo de roles (no afectado por el filtro de fechas)",
+        "total_organizations": "Total de organizaciones",
+        "total_users": "Total de usuarios",
+        "total_contacts": "Total de contactos",
+        "lifetime_messages": "Mensajes históricos"
+      },
+      "period_kpis": {
+        "title": "Rendimiento del periodo y desglose de entrega",
+        "description": "Actividad y tasas de entrega calculadas en el rango de tiempo seleccionado",
+        "campaigns_volume": "Volumen de campañas",
+        "messages_sent": "Mensajes enviados",
+        "delivered": "Entregados",
+        "read_count": "Leídos",
+        "completed_conversations": "Conv. completadas",
+        "avg_execution_time": "Tiempo prom. ejecución",
+        "mins_avg": "{{count}} min prom.",
+        "zero_seconds_avg": "0s prom.",
+        "empty": {
+          "title": "Sin actividad en este rango de tiempo",
+          "description": "No se ejecutaron campañas ni se enviaron mensajes durante el periodo seleccionado. Intenta seleccionando otro rango de fechas."
+        }
+      },
+      "organizations": {
+        "title": "Directorio de organizaciones",
+        "description": "Filtra y ordena organizaciones por volumen, mensajes enviados o campañas creadas en el periodo.",
+        "search_placeholder": "Buscar organización por nombre o slug...",
+        "filters": {
+          "all_statuses": "Todos los estados",
+          "active_only": "Solo activos",
+          "inactive_only": "Solo inactivos"
+        },
+        "sort": {
+          "label": "Ordenar:",
+          "placeholder": "Ordenar por",
+          "messages_sent_desc": "Mayor cantidad de mensajes enviados",
+          "messages_sent_asc": "Menor cantidad de mensajes enviados",
+          "campaigns_desc": "Mayor cantidad de campañas creadas",
+          "campaigns_asc": "Menor cantidad de campañas creadas"
+        },
+        "table": {
+          "campaigns_created": "Campañas creadas",
+          "messages_sent": "Mensajes enviados",
+          "empty": "No se encontraron organizaciones para los filtros seleccionados.",
+          "updating_metrics": "Actualizando métricas..."
+        }
+      }
+    }
+  },
+  "charts": {
+    "error": "No se pudo cargar la gráfica",
+    "remaining": "Resto"
+  },
+  "message_preview": {
+    "aria_label": "Vista previa del mensaje",
+    "buttons": "Botones del mensaje",
+    "carousel": "Tarjetas del carrusel",
+    "list_options": "Opciones de la lista",
+    "media_alt": "Imagen del mensaje",
+    "template_meta": "Plantilla · {{category}}",
+    "media": {
+      "unknown": "Archivo"
+    }
+  }
+}

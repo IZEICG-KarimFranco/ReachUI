@@ -1,0 +1,377 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/manrope/wght.css';
+@import 'tw-animate-css';
+@plugin '@midudev/tailwind-animations';
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-*: initial;
+  --radius-*: initial;
+  --shadow-*: initial;
+  --font-*: initial;
+}
+
+@theme inline {
+  --color-transparent: transparent;
+  --color-current: currentColor;
+  --color-inherit: inherit;
+  --color-paper: var(--paper);
+  --color-paper-secondary: var(--paper-secondary);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-ink-secondary: var(--ink-secondary);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-control: var(--control);
+  --color-selection: var(--selection);
+  --color-inset: var(--inset);
+  --color-signal: var(--signal);
+  --color-on-signal: var(--on-signal);
+  --color-signal-contrast: var(--signal-contrast);
+  --color-signal-bright: var(--signal-bright);
+  --color-signal-deep: var(--signal-deep);
+  --color-live: var(--live);
+  --color-success: var(--success);
+  --color-error: var(--error);
+  --color-info: var(--info);
+  --color-panel: var(--panel);
+  --color-panel-secondary: var(--panel-secondary);
+  --color-panel-separator: var(--panel-separator);
+  --color-on-panel: var(--on-panel);
+  --color-on-panel-muted: var(--on-panel-muted);
+  --color-on-panel-subtle: var(--on-panel-subtle);
+  --color-on-panel-secondary: var(--on-panel-secondary);
+  --color-on-panel-accent: var(--on-panel-accent);
+  --color-display-panel: var(--display-panel);
+  --color-display-panel-secondary: var(--display-panel-secondary);
+  --color-display-separator: var(--display-separator);
+  --color-on-display-panel: var(--on-display-panel);
+  --font-sans: 'Manrope Variable', 'Manrope', system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --text-display: clamp(40px, 5.5vw, 72px);
+  --text-display--line-height: 1.15;
+  --text-display--font-weight: 800;
+  --text-display--letter-spacing: -0.04em;
+  --text-headline: clamp(28px, 3.4vw, 44px);
+  --text-headline--line-height: 1.15;
+  --text-headline--font-weight: 700;
+  --text-headline--letter-spacing: -0.03em;
+  --text-title: 22px;
+  --text-title--line-height: 1.2;
+  --text-title--font-weight: 700;
+  --text-body: 15px;
+  --text-body--line-height: 1.5;
+  --text-body--font-weight: 400;
+  --text-label: 10px;
+  --text-label--font-weight: 700;
+  --text-label--letter-spacing: 0.1em;
+  --text-data: 10px;
+  --text-data--font-weight: 500;
+  --radius-control: 10px;
+  --radius-surface: 14px;
+  --radius-pill: 999px;
+  --radius-port: 50%;
+  --radius-full: 9999px;
+  --shadow-1: var(--elevation-1);
+  --shadow-2: var(--elevation-2);
+  --shadow-pop: var(--elevation-pop);
+  --shadow-lift: var(--elevation-lift);
+  --breakpoint-tablet: 35.0625rem;
+  --breakpoint-desktop: 61.3125rem;
+  --animate-skeleton: skeleton-shimmer 1.2s ease infinite;
+  --animate-spinner: spinner-rotate 0.8s linear infinite;
+  --animate-status-blink: status-blink 1.4s infinite;
+  --z-index-scrim: var(--z-scrim);
+  --z-index-rail: var(--z-rail);
+  --z-index-tabbar: var(--z-tabbar);
+  --z-index-sheet: var(--z-sheet);
+  --z-index-pop: var(--z-pop);
+
+  @keyframes skeleton-shimmer {
+    to {
+      background-position: -200% 0;
+    }
+  }
+
+  @keyframes spinner-rotate {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes status-blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.25;
+    }
+  }
+}
+
+/*
+ * Foco de Reach: borde y halo de 3 px, como los campos del mock (`.fin:focus`).
+ * El color es `signal` salvo que el elemento defina `--focus-tone` (por ejemplo
+ * `[--focus-tone:var(--error)]` en un botón destructivo, que ya tiene borde rojo).
+ */
+@utility focus-ring {
+  &:focus-visible {
+    @apply ring-3;
+    border-color: var(--focus-tone, var(--signal-bright));
+    --tw-ring-color: color-mix(
+      in srgb,
+      var(--focus-tone, var(--signal)) 25%,
+      transparent
+    );
+  }
+  &:is(.dark *):focus-visible {
+    --tw-ring-color: color-mix(
+      in srgb,
+      var(--focus-tone, var(--signal-contrast)) 30%,
+      transparent
+    );
+  }
+}
+
+/* Foco para texto en línea (enlaces): radio pequeño y un poco de aire para que el halo no quede pegado al texto. */
+@utility focus-ring-inline {
+  @apply focus-ring -mx-1 rounded-[3px] px-1 outline-none;
+}
+
+/* Foco para filas apiladas (tablas y listas): fondo `selection` y barra de 2 px a la izquierda, sin halo que invada a las filas vecinas. */
+@utility focus-row {
+  @apply outline-none;
+  &:focus-visible {
+    background-color: var(--selection);
+    box-shadow: inset 2px 0 0 var(--focus-tone, var(--signal-bright));
+  }
+}
+
+/* Igual que `focus-ring`, pero también al hacer clic: para campos de texto y selects. */
+@utility focus-ring-field {
+  &:focus {
+    @apply ring-3;
+    border-color: var(--focus-tone, var(--signal-bright));
+    --tw-ring-color: color-mix(
+      in srgb,
+      var(--focus-tone, var(--signal)) 25%,
+      transparent
+    );
+  }
+  &:is(.dark *):focus {
+    --tw-ring-color: color-mix(
+      in srgb,
+      var(--focus-tone, var(--signal-contrast)) 30%,
+      transparent
+    );
+  }
+}
+
+:root {
+  color-scheme: light;
+  --paper: #F7F6F4;
+  --paper-secondary: #FFFFFF;
+  --card: #FFFFFF;
+  --ink: #292632;
+  --ink-secondary: #5F5B68;
+  --muted: #6E6875;
+  --line: #E9E6EC;
+  --line-strong: #D9D5DF;
+  --control: #E5E1EA;
+  --selection: #F2EFFA;
+  --inset: #F8F7FA;
+  --signal: #5B2EED;
+  --on-signal: #FFFFFF;
+  --signal-contrast: #4721C9;
+  --signal-bright: #6E4BE9;
+  --signal-deep: #4721C9;
+  --live: #85580C;
+  --success: #287653;
+  --error: #B54747;
+  --info: #3E63DD;
+  --panel: #14121B;
+  --panel-secondary: #1D1A27;
+  --panel-separator: #2E2A3C;
+  --on-panel: #E9E5DA;
+  --on-panel-muted: #8B86A0;
+  --on-panel-subtle: #6B6584;
+  --on-panel-secondary: #B9B3CC;
+  --on-panel-accent: #B9A4FF;
+  --display-panel: #14121B;
+  --display-panel-secondary: #1D1A27;
+  --display-separator: #2E2A3C;
+  --on-display-panel: #E9E5DA;
+  --elevation-1: 0 14px 30px -20px rgba(25, 23, 33, 0.34);
+  --elevation-2: 0 18px 38px -22px rgba(25, 23, 33, 0.36);
+  --elevation-pop: 0 14px 32px -14px rgba(25, 23, 33, 0.42);
+  --elevation-lift: 0 18px 36px -16px rgba(25, 23, 33, 0.42);
+  --page-x: 40px;
+  --page-y: 32px;
+  --page-bottom: 72px;
+  --content-max: 1280px;
+  --rail-w: 248px;
+  --surface-gap: 16px;
+  --section-gap: 32px;
+  --z-scrim: 39;
+  --z-rail: 40;
+  --z-tabbar: 50;
+  --z-sheet: 80;
+  --z-pop: 95;
+}
+
+@media (max-width: 980px) {
+  :root {
+    --page-x: 24px;
+    --page-y: 24px;
+    --page-bottom: 104px;
+  }
+}
+
+@media (max-width: 560px) {
+  :root {
+    --page-x: 18px;
+    --page-bottom: 100px;
+  }
+}
+
+.dark {
+  color-scheme: dark;
+  --paper: #19171F;
+  --paper-secondary: #211F28;
+  --card: #24212B;
+  --ink: #F3F0F6;
+  --ink-secondary: #C4BFCC;
+  --muted: #A29CAA;
+  --line: #36323E;
+  --line-strong: #494450;
+  --control: #3A3542;
+  --selection: #302B3B;
+  --inset: #201D27;
+  --signal: #7A54F5;
+  --signal-contrast: #A98FFF;
+  --signal-bright: #9B7BFF;
+  --signal-deep: #5B2EED;
+  --live: #E5B85D;
+  --success: #72C39A;
+  --error: #F08A8A;
+  --info: #8EA6F5;
+  --panel: #0E0C14;
+  --panel-secondary: #161320;
+  --panel-separator: #262130;
+  --on-panel: #D9D4C8;
+  --elevation-1: 0 16px 36px -16px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  --elevation-2: 0 22px 44px -18px rgba(0, 0, 0, 0.72), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  --elevation-pop: 0 16px 36px -12px rgba(0, 0, 0, 0.72), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  --elevation-lift: 0 24px 48px -16px rgba(0, 0, 0, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+@layer base {
+  * {
+    @apply border-line;
+  }
+
+  ::selection {
+    background: var(--signal);
+    color: var(--on-signal);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--signal-contrast);
+    outline-offset: 2px;
+  }
+
+  html {
+    color-scheme: light;
+    scroll-behavior: smooth;
+  }
+
+  /* Respect user's preference for reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans;
+  }
+
+  @layer base {
+    /* Estilos para navegadores basados en Webkit (Chrome, Safari, Edge) */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: var(--muted);
+      border-radius: 20px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: var(--muted);
+    }
+
+    /* Estilo para Firefox */
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: var(--muted) transparent;
+    }
+  }
+}
+
+.bg-logo {
+  position: relative;
+  background-color: var(--paper);
+  overflow: hidden;
+  z-index: 0;
+}
+
+.bg-logo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.1;
+  background-size: 150px 150px;
+
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGggdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjAsIDIwKSBzY2FsZSgwLjUpIiBmaWxsPSIjRTVFNUU1IiBkPSJNMCAwaDMzdjMzSDB6Ii8+CiAgPHBhdGggdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjAsIDIwKSBzY2FsZSgwLjUpIiBmaWxsPSIjNWIyZWVkIiBkPSJNMzMgMGg2N3YzM0gzM3pNMCAzM2gzM3Y2N0gweiIvPgogIAogIDxwYXRoIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwMCwgMTAwKSByb3RhdGUoNDUpIHNjYWxlKDAuNSkiIGZpbGw9IiNFNUU1RTUiIGQ9Ik0wIDBoMzN2MzNIMHoiLz4KICA8cGF0aCB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMDAsIDEwMCkgcm90YXRlKDQ1KSBzY2FsZSgwLjUpIiBmaWxsPSIjNWIyZWVkIiBkPSJNMzMgMGg2N3YzM0gzM3pNMCAzM2gzM3Y2N0gweiIvPgogIAogIDxwYXRoIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE2MCwgMTUwKSBzY2FsZSgwLjQpIiBmaWxsPSIjRTVFNUU1IiBkPSJNMCAwaDMzdjMzSDB6Ii8+CiAgPHBhdGggdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTYwLCAxNTApIHNjYWxlKDAuNCkiIGZpbGw9IiM1YjJlZWQiIGQ9Ik0zMyAwaDY3djMzSDMzek0wIDMzaDMzdjY3SDB6Ii8+Cjwvc3ZnPg==');
+}
+
+.dark {
+  .bg-logo::before {
+    opacity: 0.2;
+  }
+}
+
+/* Sonner toast action button styles by type */
+[data-sonner-toast][data-type='success'] [data-action='true'] {
+  background-color: var(--success) !important;
+  color: var(--paper) !important;
+}
+
+[data-sonner-toast][data-type='error'] [data-action='true'] {
+  background-color: var(--error) !important;
+  color: var(--paper) !important;
+}
+
+[data-sonner-toast][data-type='warning'] [data-action='true'] {
+  background-color: var(--live) !important;
+  color: var(--paper) !important;
+}
+
+[data-sonner-toast][data-type='info'] [data-action='true'] {
+  background-color: var(--info) !important;
+  color: var(--paper) !important;
+}
